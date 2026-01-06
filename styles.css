@@ -2367,3 +2367,33 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
  ::-webkit-scrollbar-thumb:hover {
      background: var(--color-background-blue);
  }
+
+
+ .logo-img {
+    height: 80px;
+    width: auto;
+    max-width: 220px;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-bottom-content {
+    padding: 10px 12px;
+    overflow: visible;   /* ✅ allow logo to show */
+  }
+
+  .logo-img {
+    height: 45px;        /* ✅ mobile-friendly */
+    max-width: 160px;
+    margin-left: 0;
+  }
+
+  .left {
+    display: none;       /* hides long menu on mobile (already expected) */
+  }
+
+  .j-menu,
+  .call {
+    display: block;      /* menu + call icons */
+  }
+}
