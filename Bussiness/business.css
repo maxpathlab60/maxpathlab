@@ -1,0 +1,1448 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+}
+
+:root {
+  --color-background-blue: #0047af;
+  --color-text-blue: #0b51b3;
+  --color-grey-nav2-text: #010101;
+  --color-black: black;
+  --color-white: #ffff;
+  --color-grey-button: #bcbcbc;
+  --color-yellow: #fecc4e;
+  --color-cardHeading: #181818;
+  --color-body-text: #212529;
+  --color-background: #f1f1f1;
+
+  --font-family: "PT Sans", sans-serif;
+
+  --size-12px: 0.75rem;
+  --size-13px: 0.8125rem;
+  --size-14px: 0.875rem;
+  --size-15px: 0.9375rem;
+  --size-paragraph: 1rem;
+  --size-sub-heading: 1.125rem;
+  /*18px*/
+  --size-20px: 1.25rem;
+  /*20px*/
+  --size-cardHeading1: 1.5rem;
+  /*24px*/
+  --size-cardHeading2: 1.5625rem;
+  /*25px*/
+  --size-30px: 1.875rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-blue);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-background-blue);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--color-background);
+}
+
+header {
+  max-width: 100%;
+  height: 5rem;
+}
+
+.navbar-top {
+  max-width: 100%;
+  background-color: var(--color-yellow);
+}
+
+.nav-content {
+  max-width: 78.5rem;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-around;
+  width: 52%;
+  margin-left: 15%;
+  gap: 1rem;
+}
+
+.blogHyperLink {
+  display: flex;
+  margin-left: -60px;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+
+.nav-content a {
+  font-size: var(--size-13px);
+  text-decoration: none;
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.blogHyperLink a {
+  font-size: 11px;
+}
+
+.vertical-line {
+  background-color: black;
+  color: black;
+  width: 0.95px;
+  margin: 0 12px;
+  height: 14px;
+  border: none;
+}
+
+.patient a,
+.user-content a {
+  font-weight: bold;
+  color: var(--color-background-blue);
+}
+
+.user-content .profile {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.user-content .arrow {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.user-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.Account-user {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  color: black;
+  font-size: 1rem;
+  border: 1px solid #fcc740;
+}
+
+.account-image {
+  background-color: #0047Af;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.drop-down {
+  background-color: white;
+  color: black;
+  position: absolute;
+  z-index: 30;
+  visibility: collapse;
+
+}
+
+.acc-head {
+  margin-bottom: 10px;
+}
+
+.welcome-guest {
+  font-weight: 400;
+}
+
+.my-order a,
+.my-permission a,
+.wallet-balance a {
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px;
+  border: 1px solid white;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.navList a:hover {
+  text-decoration: underline;
+  color: var(--color-background-blue);
+  font-weight: bold;
+}
+
+.patient a {
+  text-decoration: underline;
+}
+
+.navbar-bottom {
+  display: flex;
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 6px rgb(193, 191, 191);
+}
+
+.navbar-bottom-content {
+  display: flex;
+  width: 85rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 50px;
+  padding: 10px 0 18px;
+}
+
+.left {
+  display: flex;
+  width: 45%;
+  gap: 6%;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: end;
+  width: 55%;
+  margin: -12px;
+  gap: 10px;
+}
+
+.location {
+  display: flex;
+  gap: 8px;
+  margin-left: 5px;
+}
+
+.left a {
+  text-decoration: none;
+  font-size: var(--size-13px);
+  color: var(--color-grey-nav2-text);
+  white-space: nowrap;
+}
+
+.city-name {
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+.search-location input {
+  width: 100px;
+  outline: none;
+  border: none;
+  border-bottom: 1.7px solid #448ac0;
+  background-color: #f5f5f5;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.search-location ::placeholder {
+  font-size: 10px;
+}
+
+.location .icon {
+  font-size: 26px;
+  color: var(--color-background-blue);
+}
+
+.search-test input {
+  border: none;
+  width: 100%;
+  padding: 10px 5px;
+  outline: none;
+  background-color: transparent;
+}
+
+.search-test form {
+  display: flex;
+  padding-right: 8px;
+  align-items: center;
+  width: 270px;
+  outline: none;
+  border: none;
+  border-bottom: 1.7px solid #448ac0;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.search-test form i {
+  font-size: var(--size-20px);
+  color: #448ac0;
+}
+
+.cart img {
+  height: 28px;
+  margin: 0 50px 0 10px;
+}
+
+.search-test ::placeholder {
+  font-size: var(--size-12px);
+}
+
+.menu,
+.call {
+  display: none;
+}
+
+@media screen and (max-width: 1260px) {
+  .navbar-bottom-content {
+    gap: 10px;
+  }
+
+  .left {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar-top {
+    display: none;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .cart {
+    position: absolute;
+    left: 87%;
+  }
+
+  .cart img {
+    margin: 0;
+  }
+
+  .navbar-bottom {
+    position: relative;
+    height: 160px;
+    padding: 0 30px;
+  }
+
+  .navbar-bottom-content img {
+    transform: scale(1.1);
+    flex-grow: 1;
+  }
+
+  .navbar-bottom-content {
+    width: 50rem;
+    margin: 0 auto;
+    align-items: start;
+    gap: 30px;
+  }
+
+  .search-test {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    max-width: 90vw;
+    position: absolute;
+    top: 110px;
+    left: 30px;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .search-test form {
+    flex-grow: 0.5;
+    min-width: 50%;
+  }
+
+  .menu,
+  .call {
+    display: contents;
+  }
+
+  .location {
+    margin-top: 20px;
+  }
+
+  .city-name {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+
+  .menu .call {
+    display: none;
+  }
+
+  .business-partnership-img {
+    margin-top: 7rem;
+  }
+
+  .ab-navbar-home {
+    margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .location {
+    margin-left: -50px;
+  }
+
+  .navbar-bottom-content img {
+    transform: scale(0.8);
+  }
+
+  .navbar-bottom {
+    padding: 0 10px;
+  }
+
+  .ab-partner-cards {
+    flex-direction: column;
+  }
+}
+
+.ab-navbar-home {
+  width: 100%;
+  position: relative;
+}
+
+.ab-navbar-home {
+  position: absolute;
+  top: 137px;
+  z-index: -10;
+}
+
+.ab-container {
+  margin-top: 3.5rem;
+}
+
+.ab-navbar {
+  background-color: var(--color-yellow);
+}
+
+.ab-navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 10px 0;
+  margin-left: 10rem;
+}
+
+.ab-navbar a {
+  text-decoration: none;
+  font-size: var(--size-sub-heading);
+  color: #181818;
+}
+
+.ab-partnership-banner {
+  background-image: url('./partnership-banner\ \(2\).webp');
+  margin: 6rem 0 0 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 4%;
+}
+
+.ab-partnership-banner h1 {
+  color: var(--color-white);
+  font-size: 2.2rem;
+  padding: 0 20px;
+}
+
+.ab-overview {
+  background-color: var(--color-white);
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1320px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.ab-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  justify-content: space-between;
+}
+
+.ab-overview-lists {
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  gap: 20px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.ab-overview-content p {
+  margin-top: 20px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.ab-overview-content h1 {
+  font-size: 1.8rem;
+  font-weight: 550;
+}
+
+.ab-overview-lists p span {
+  color: var(--color-background-blue);
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+.ab-overview-lists img:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-in-out;
+}
+
+.ab-partner {
+  background-color: var(--color-white);
+  margin: 0 auto 30px;
+  width: 100%;
+  max-width: 1320px;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+
+.ab-partner h1 {
+  font-weight: 550;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.ab-partner-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ab-partnership-options img {
+  width: 100%
+}
+
+.ab-partnership-options p {
+  color: #515457;
+  font-size: 1.1rem;
+}
+
+.ab-vendor {
+  background-color: var(--color-white);
+  margin: 0 auto 30px;
+  width: 100%;
+  max-width: 1320px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.ab-vendors-img {
+  background-image: url("https://uat-cdn.drlallab.com/2022-12/become-a-vendor.png");
+  width: 100%;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4% 0 4% 12%;
+}
+
+.ab-vendors-img h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  /* margin-top: 3rem; */
+}
+
+.ab-vendors-img button {
+  margin-top: 1rem;
+  width: 8vw;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.ab-vendors-img button:hover {
+  background-color: var(--color-white);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.ab-options {
+  background-color: var(--color-white);
+  margin: 0 auto 30px;
+  width: 100%;
+  max-width: 1320px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.ab-options ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4%;
+}
+
+.ab-options ul li {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 20px;
+}
+
+.ab-options ul li img {
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.ab-options ul li:hover {
+  cursor: pointer;
+}
+
+.ab-courses {
+  background-color: var(--color-white);
+  margin: auto;
+  width: 100%;
+  max-width: 1320px;
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+.ab-course-img {
+  background-image: url("https://uat-cdn.drlallab.com/2022-12/want-to-do.png");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4% 0 4% 12%;
+  border-radius: 20px;
+  
+}
+
+.ab-course-img>h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.ab-course-img>button {
+  margin-top: 1.5rem;
+  width: 8vw;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.ab-course-img>button:hover {
+  background-color: var(--color-white);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+
+/* ----------------------------------------------------------- */
+.lab-testAtHome {
+  width: 100%;
+  background-color: var(--color-background);
+  padding: 20px 0;
+}
+
+.lab-test-container {
+  max-width: 1320px;
+  margin: auto;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.location-list {
+  display: flex;
+  gap: 7px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  line-height: 25px;
+}
+
+.lab-test-content {
+  padding: 15px 15px 100px;
+
+}
+
+.lab-test-content h1 {
+  font-size: var(--size-cardHeading2);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  color: var(--color-cardHeading);
+}
+
+.location-list a {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.location-list a:hover {
+  color: var(--color-background-blue);
+  text-decoration: underline;
+}
+
+.popular-test {
+  width: 100%;
+  background-color: var(--color-background);
+  padding: 20px 0;
+}
+
+.popular-test-container {
+  max-width: 1320px;
+  margin: auto;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.popular-test-list {
+  display: flex;
+  gap: 7px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  line-height: 25px;
+}
+
+.popular-test-content {
+  padding: 15px 15px 100px;
+}
+
+.popular-test-content h6 {
+  font-size: var(--size-cardHeading2);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  color: var(--color-cardHeading);
+}
+
+.popular-test-list a {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.popular-test-list a:hover {
+  color: var(--color-background-blue);
+  text-decoration: underline;
+}
+
+.footer-section {
+  width: 100%;
+  position: relative;
+}
+
+.footer-top {
+  width: 100%;
+  background-color: rgb(254, 204, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "PT sans";
+  padding: 50px;
+}
+
+.footer-links {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  justify-content: space-around;
+}
+
+.link_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.link_col h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.footer-bottom {
+  width: 100%;
+  background-color: #0047af;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-family: "PT sans";
+}
+
+.footer-bottom .copyright {
+  max-width: 1280px;
+  color: white;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.follow_us {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+  text-transform: capitalize;
+}
+
+.social_icons {
+  display: flex;
+  gap: 4px;
+}
+
+.copyright h2 {
+  font-weight: 700;
+}
+
+.footer_icons {
+  height: 2rem;
+  width: 2rem;
+  background-color: #fecc4e;
+  color: #0b51b3;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) and (min-width:769px) {
+  .navbar-bottom-content {
+    gap: 4px;
+    width: 85%;
+  }
+
+  .ab-options ul {
+    flex-wrap: wrap;
+  }
+
+  .ab-courses {
+    max-width: 70%;
+  }
+
+  .ab-partnership-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .ab-overview {
+    width: 70%;
+  }
+
+  .ab-overview-content h1 {
+    font-size: 1.3rem;
+    font-weight: 550;
+  }
+
+  .ab-overview-content p {
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+
+
+   .ab-overview-lists p span {
+    font-size: 1.5rem;
+  }
+
+  .ab-overview-lists p {
+    font-size: 0.9rem;
+  }
+
+  .ab-partner {  
+    width: 70%;
+    border-radius: 20px;
+  }
+
+  .ab-partner h1 {
+    font-size: 1.3rem;
+  }
+
+  .ab-partnership-options p {
+    font-size: 0.9rem;
+  }
+
+  .ab-vendor {
+    width: 70%;
+  }
+
+  .ab-vendors-img {
+    background-image: url(https://uat-cdn.drlallab.com/2022-12/become-a-vendor.png);
+    width: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+  }
+
+  .ab-options {
+    width: 70%;
+  }
+
+  
+
+  .ab-course-img>h5 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .ab-course-img>button {
+    width: 8vw;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .location-list {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    line-height: 25px;
+    WIDTH: 100%;
+  }
+
+  .lab-test-container {
+    max-width: 1320px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 15px;
+  }
+
+  .popular-test-container {
+    width: 70%;
+  }
+
+  .lab-test-container,
+  .popular-test-container {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .side-element {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: auto;
+    bottom: 0%;
+
+    justify-content: space-between;
+    align-items: center;
+    height: min-content;
+
+  }
+
+  .side-element a p {
+    border-bottom: none;
+
+  }
+  .lab-test-container{
+    width:90%;
+  }
+  .side-element a {
+    border-right: 1px solid rgba(0, 0, 0, .1);
+  }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .ab-partnership-banner h1 {
+    font-size: 1.3rem;
+    
+  }
+
+  .ab-overview,
+  .ab-options,
+  .ab-courses {
+    width: 90%;
+  }
+
+  .ab-overview-content h1 {
+    font-size: 1.1rem;
+    font-weight: 550;
+  }
+
+  .ab-overview-content p {
+    line-height: 1.2;
+    font-size: 0.7rem;
+  }
+
+  .ab-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .ab-overview-lists p span {
+    font-size: 1.3rem;
+  }
+
+  .ab-overview-lists p {
+    font-size: 0.7rem;
+  }
+
+  .ab-partner {
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .ab-partner h1 {
+    font-size: 1rem;
+  }
+
+  .ab-partnership-options p {
+    font-size: 0.9rem;
+  }
+
+  .ab-vendor {
+    width: 90%;
+  }
+
+  .ab-vendors-img {
+    background-image: url(https://uat-cdn.drlallab.com/2022-12/become-a-vendor.png);
+    width: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+  }
+
+  .ab-vendors-img h4 {
+    font-size: 1.2rem;
+  
+    font-weight: 550;
+  }
+
+  .ab-vendors-img button {
+    
+    width: 8vw;
+    background-color: transparent;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+
+  .ab-course-img>h5 {
+    font-size: 0.6rem;
+    font-weight: 550;
+  }
+
+  .ab-course-img>button {
+
+    width: 8vw;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  
+  .popular-test-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .ab-navbar a{
+    font-size: 0.9rem;
+  }
+  .ab-navbar ul{
+    margin-left: 3rem;
+  }
+
+  .ab-partnership-banner h1 {
+    font-size: 0.8rem;
+  }
+
+  .ab-overview {
+    width: 90%;
+  }
+
+  .ab-overview-lists {
+    flex-grow: 1;
+  }
+
+  .ab-overview-content h1 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .ab-overview-content p {
+    line-height: 1.2;
+    font-size: 0.6rem;
+  }
+
+  .ab-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .ab-overview-lists p span {
+    font-size: 1.1rem;
+  }
+
+  .ab-overview-lists p {
+    font-size: 0.6rem;
+  }
+
+  .ab-partner {
+
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .ab-partner h1 {
+    font-size: 1.3rem;
+  }
+
+  .ab-partnership-options p {
+    font-size: 0.9rem;
+  }
+
+  .ab-vendor {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .ab-vendors-img {
+    background-image: url(https://uat-cdn.drlallab.com/2022-12/become-a-vendor.png);
+    width: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+  }
+
+  .ab-vendors-img h4 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .ab-vendors-img button {
+    width: 17vw;
+    background-color: transparent;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+
+  .ab-options ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ab-course-img>h5 {
+    font-size: 0.5rem;
+    font-weight: 600;
+  }
+
+  .ab-course-img>button {
+    width: 15vw;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .ab-navbar {
+    background-color: var(--color-yellow);
+  }
+
+  .ab-navbar a {
+    font-size: 0.8rem;
+  }
+
+
+  
+
+  .ab-partnership-banner h1 {
+    font-size: o.7rem;
+  }
+
+  .ab-overview {
+   
+    width: 90%;
+    
+    padding: 10px;
+  }
+
+  .ab-overview-lists {
+    flex-grow: 1;
+  }
+
+  .ab-overview-content h1 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .ab-overview-content p {
+    
+    line-height: 1.2;
+    font-size: 0.6rem;
+  }
+
+  .ab-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  
+  }
+
+  .ab-overview-lists p span {
+    font-size: 1.1rem;
+  }
+
+  .ab-overview-lists p {
+    font-size: 0.6rem;
+  }
+
+  .ab-partner {
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .ab-partner h1 {
+    font-size: 1.3rem;
+  }
+
+  .ab-partnership-options p {
+    font-size: 0.9rem;
+  }
+
+  .ab-vendor {
+    width: 90%;
+  }
+
+  .ab-vendors-img {
+    background-image: url(https://uat-cdn.drlallab.com/2022-12/become-a-vendor.png);
+    width: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+  }
+
+  .ab-vendors-img h4 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .ab-vendors-img button {
+    width: 17vw;
+    background-color: transparent;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .ab-options ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ab-course-img>h5 {
+    font-size: 0.5rem;
+    font-weight: 550;
+  }
+
+  .ab-course-img>button {
+    width: 15vw;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+    /* margin-left: -2rem; */
+  }
+
+  .popular-test-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  
+  .ab-navbar {
+    background-color: var(--color-yellow);
+    display: flex;
+    align-items: center;
+  }
+
+  .ab-navbar a {
+    font-size: 0.8rem;
+  }
+
+  .ab-partnership-banner h1 {
+    font-size: 0.5rem;
+  }
+
+  .ab-overview {
+    width: 90%;
+  }
+
+  .ab-overview-content h1 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .ab-overview-content p {
+    line-height: 1.2;
+    font-size: 0.6rem;
+  }
+
+  .ab-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .ab-overview-lists p span {
+    font-size: 1.1rem;
+  }
+
+  .ab-overview-lists p {
+    font-size: 0.6rem;
+  }
+
+  .ab-partner {
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .ab-partner h1 {
+    font-size: 1.3rem;
+  }
+
+  .ab-partnership-options p {
+    font-size: 0.9rem;
+  }
+
+  .ab-vendor {
+    width: 90%;
+  }
+
+  .ab-vendors-img {
+    background-image: url(https://uat-cdn.drlallab.com/2022-12/become-a-vendor.png);
+    width: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+  }
+
+  .ab-vendors-img h4 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .ab-vendors-img button {
+    width: 17vw;
+    background-color: transparent;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .ab-options ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ab-course-img>h5 {
+    font-size: 0.3rem;
+    font-weight: 550;
+  }
+
+  .ab-course-img>button {
+    width: 19vw;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+    /* margin-left: -1rem; */
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+  .footer-bottom .copyright {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .footer-top {
+    padding: 0%;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer-top {
+    visibility: hidden;
+    overflow: hidden;
+    /* height: 80px; */
+    position: absolute;
+  }
+
+  .ab-options ul {
+    flex-wrap: wrap;
+  }
+}

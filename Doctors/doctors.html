@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./Assets/fevicon.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="doctors.css" />
+  <link rel="stylesheet" href="flickity.css" />
+  <title>
+    Doctors Information | Pathology Tests Recommended by Doctors | Dr Lal
+    PathLabs
+  </title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header id="top">
+    <nav class="navbar-top">
+      <div class="nav-content">
+        <div class="navList">
+          <div class="navList-items">
+            <a href="../Patients/index.html">PATIENTS</a>
+          </div>
+          <div class="navList-items doctors">
+            <a href="doctors.html">DOCTORS</a>
+          </div>
+          <div class="navList-items">
+            <a href="../Bussiness/business.html">BUSINESS PARTNERSHIP</a>
+          </div>
+          <div class="navList-items">
+            <a href="../About_us/about.html">ABOUT US</a>
+          </div>
+          <div class="navList-items">
+            <a href="../Investors/dist/investors.html">INVESTORS</a>
+          </div>
+          <div class="navList-items">
+            <a href="../Contact_us/contact.html">CONTACT US</a>
+          </div>
+        </div>
+        <div class="blogHyperLink">
+          <div class="blog"><a href="">BLOGS</a></div>
+          <hr class="vertical-line" />
+          <!-- <div class="vertical-line"></div> -->
+          <div class="FAQ"><a href="#faq">FAQS</a></div>
+        </div>
+        <div class="user">
+          <div class="user-content">
+            <a href="">
+              <i class="fa-regular fa-user profile"></i>
+              <span class="welcome-user">Welcome Guest User</span>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Secondary Navbar -->
+
+    <nav class="navbar-bottom">
+      <div class="navbar-bottom-content">
+        <a href="../Patients/index.html"><img src="https://uat-cdn.drlallab.com/2023-06/logo-header-2.webp" alt="" /></a>
+        <div class="left">
+          <div class="bottom-navList"><a href="#test-menu">Test Menu</a></div>
+          <div class="bottom-navList"><a href="#our-labs">Our Labs</a></div>
+          <div class="bottom-navList"><a href="#events">Events</a></div>
+          <div class="bottom-navList"><a href="#quality">Quality</a></div>
+          <div class="bottom-navList">
+            <a href="#resource-center">Resource Centre</a>
+          </div>
+          <div class="bottom-navList">
+            <a href="#our-departments">Our Department</a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="location">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="search-location">
+              <p class="city-name">Bhilai</p>
+              <input type="search" placeholder="Search Location..." />
+            </div>
+          </div>
+
+          <div class="search-test">
+            <!-- On click Side Menu For Small screen -->
+            <div class="menu">
+              <input type="checkbox" id="checkbox">
+              <label for="checkbox" class="click-me-icon"><i class="fa-solid fa-bars"></i></label>
+              <div class="menu-container">
+
+                <div class="user menu-content">
+                  <div>
+                    <a href=""><img src="https://uat-cdn.drlallab.com/images/Profile-16.png" alt=""><span>Welcome Guest
+                        User</span><i class="fa-solid fa-angle-down"></i></a>
+                  </div>
+                  <div class="close">
+                    <a href=""><i class="fa-solid fa-xmark"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="menu-content patient-arrow">
+                  <div class="patient-container">
+                    <a href="./index.html">
+                      <!-- <img src="https://uat-cdn.drlallab.com/images/mbl-menu1.png" alt=""> -->
+                      <span>PATIENTS</span>
+                      <div class="down-arrow">
+                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
+                      </div>
+                    </a>
+                    <div class="patient-list">
+                      <ul>
+                        <li>Book a Test</li>
+                        <li>Nearest Center</li>
+                        <li>Download Report</li>
+                        <li>Special Programs</li>
+                        <li>Promotion & Discounts</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="menu-content">
+                  <div>
+                    <a href="../Doctors/doctors.html">
+                      <img src="https://uat-cdn.drlallab.com/images/mbl-menu2.png" alt=""><span>DOCTORS</span>
+                    </a>
+                  </div>
+                  <div class="down-arrow">
+                    <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
+                  </div>
+                </div>
+
+                <div class="menu-content">
+                  <div>
+                    <a href="../Bussiness/business.html">
+                      <img src="https://uat-cdn.drlallab.com/images/mbl-menu3.png" alt=""><span>BUSINESS
+                        PARTNERSHIP</span>
+                    </a>
+                  </div>
+                  <div class="down-arrow">
+                    <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
+                  </div>
+                </div>
+
+                <div class="menu-content">
+                  <div>
+                    <a href="../About_us/about.html">
+                      <img src="https://uat-cdn.drlallab.com/images/mbl-menu4.png" alt="">
+                      <span>ABOUT</span>
+                    </a>
+                  </div>
+                  <div class="down-arrow">
+                    <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
+                  </div>
+                </div>
+
+                <div class="menu-content">
+                  <div>
+                    <a href="../Investors/dist/investors.html">
+                      <img src="https://uat-cdn.drlallab.com/images/mbl-menu5.png" alt=""><span>INVESTORS</span>
+                    </a>
+                  </div>
+                  <div class="down-arrow">
+                    <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
+                  </div>
+                </div>
+
+                <div class="menu-content">
+                  <div>
+                    <a href="../Contact_us/contact.html">
+                      <img src="https://uat-cdn.drlallab.com/images/mbl-menu6.png" alt=""><span>CONTACT
+                        US</span>
+                    </a>
+                  </div>
+                  <div class="down-arrow">
+                    <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
+                  </div>
+                </div>
+
+                <div class="menu-content download-app">
+                  <div>
+                    <a href="../Contact_us/contact.html">
+                      <span>BLOG | FAQS</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="menu-content download-app">
+                  <div>
+                    <a href="../Contact_us/contact.html">
+                      <span>Download App</span><span><img src="https://uat-cdn.drlallab.com/2022-12/mbl-app1.png"
+                          alt=""> | <img src="https://uat-cdn.drlallab.com/2022-12/mbl-app2.png" alt=""></span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="menu-content download-app">
+                  <div>
+                    <a href="../Contact_us/contact.html">
+                      <span>Download App</span><span>
+                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-social1.png" alt="">
+                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-social2.png" alt="">
+                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-social3.png" alt="">
+                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-youtube.png" alt="">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="">
+              <input type="text" placeholder="Search Test & Packages" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+            <div class="call"><i class="fa-solid fa-phone-volume"></i></div>
+          </div>
+          <div class="cart">
+            <img src="https://uat-cdn.drlallab.com/2022-12/cart-plus.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Slider section -->
+
+    <section class="slider-section">
+      <div class="path">
+        <a href="../Patients/index.html">Home &emsp;></a>
+        <p>&ensp;Doctors</p>
+      </div>
+      <div class="main-carousel slider"
+        data-flickity='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "draggable": false}'>
+        <div class="carousel-cell slide-item">
+          <img src="./Assets/Slider/The Cardiology Division.png" alt="" />
+        </div>
+        <div class="carousel-cell slide-item">
+          <img src="./Assets/Slider/Post Doctoral Fellowship.webp" alt="" />
+        </div>
+        <div class="carousel-cell slide-item">
+          <img src="./Assets/Slider/Allergy.webp" alt="" />
+        </div>
+        <div class="carousel-cell slide-item">
+          <img src="./Assets/Slider/Steroid Panel.webp" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Test Menu -->
+
+    <section class="test-menu-container" id="test-menu">
+      <h3>Test Menu</h3>
+      <div class="test-button-container">
+        <ul class="button-container">
+          <li><button class="test-button condition">Condition</button></li>
+          <li><button class="test-button specialty">Specialty</button></li>
+          <li><a href="../Book_a_test/dist/book_a_test.html"><button class="test-button all-test">All Test</button></a></li>
+          <li><button class="test-button alphabet">Alphabet</button></li>
+        </ul>
+
+        <div class="search-item">
+          <input type="search" placeholder="Search Test" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="main-carousel menu-items"
+        data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true}'>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Abortions.png" alt="" />
+          <p>Abortions</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Acid-Base_0.png" alt="" />
+          <p>Acid Base Imbalance</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Allergy.png" alt="" />
+          <p>Allergy</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Diabetes.png" alt="" />
+          <p>Diabetes</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/AIDS_0.png" alt="" />
+          <p>AIDS</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Arthritis_0.png" alt="" />
+          <p>Arthritis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Athletic_0.png" alt="" />
+          <p>Athletic Performance</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Blood-Disorders_0.png" alt="" />
+          <p>Blood Disorders</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Bone-&-Mineral_0.png" alt="" />
+          <p>Bone Marroe Transplantation</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disease-Association_0.png" alt="" />
+          <p>Disease Association</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Diseases-of-Liver_0.png" alt="" />
+          <p>Diseases of Liver</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-Reproductive-system_0.png" alt="" />
+          <p>Diseases of Reproductive System</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-Pancreas_1.png" alt="" />
+          <p>Disorder of Pancreas</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-adrenal-gland.png" alt="" />
+          <p>Disorders of Adrenal Gland</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-Hemopoiesis_0.png" alt="" />
+          <p>Disorders of Haemopoiesis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-Kidney_0.png" alt="" />
+          <p>Disorders of Kidney</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Diseases-of-Liver_0.png" alt="" />
+          <p>Disorder of Liver</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of--liver-and-kidney_0.png" alt="" />
+          <p>Disorders of Liver and Kidney</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-muscle_0.png" alt="" />
+          <p>Disorders of Muscle</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-Pancreas_1.png" alt="" />
+          <p>Disorders of Pancreas</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-Respiratory-System_0.png" alt="" />
+          <p>Disorders of Respiratory System</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Disorders-of-skin_0.png" alt="" />
+          <p>Disorders of Skin</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Drugs-of-Abuse_0.png" alt="" />
+          <p>Drugs of Abuse</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Electrolyte_0.png" alt="" />
+          <p>Electrolyte Imbalance</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Establishing_0.png" alt="" />
+          <p>Establishing Paternity</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Establishing-Relationship_0.png" alt="" />
+          <p>Establishing Relationship</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Fever_0.png" alt="" />
+          <p>Fever</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Genetic-Di.png" alt="" />
+          <p>Genetic Disorders</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Genetics_0.png" alt="" />
+          <p>Genetics</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Head-Injury_0.png" alt="" />
+          <p>Head Injury</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Health-Check-Up_0.png" alt="" />
+          <p>Health Check-up</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Heart-Diseases_0.png" alt="" />
+          <p>Heart Diseases</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Hirsutism_0.png" alt="" />
+          <p>Hirsutism</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/HIV_0.png" alt="" />
+          <p>HIV</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Hypertension_0.png" alt="" />
+          <p>Hypertension</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Identification_0.png" alt="" />
+          <p>Identification of Crystals</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Inborn-Errors_0.png" alt="" />
+          <p>Inborn Errors of Metabolism</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Infection_0.png" alt="" />
+          <p>Infections</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Kidney-disease_1.png" alt="" />
+          <p>Kidney Disease</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Kidney-disease_1.png" alt="" />
+          <p>Kidney Stones</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Malabsorption_0.png" alt="" />
+          <p>Malabsorption Syndrome</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Male-Infertility_0.png" alt="" />
+          <p>Male Infertility</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Multiple_0.png" alt="" />
+          <p>Multiple Myeloma</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Multiple-Sclerosis_0.png" alt="" />
+          <p>Multiple Sclerosis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Muscular_0.png" alt="" />
+          <p>Muscular Disorder</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Myasthenia_0.png" alt="" />
+          <p>Myasthenia Gravis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Nephrologist_0.png" alt="" />
+          <p>Nephrologist</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Neurologic_0.png" alt="" />
+          <p>Neurologic</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Osteoporosis_0.png" alt="" />
+          <p>Osteoporosis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Ovarian-Cancer_0.png" alt="" />
+          <p>Ovarian Cancer</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Paraneoplastic_0.png" alt="" />
+          <p>Paraneoplastic Syndromes</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Parasitic_0.png" alt="" />
+          <p>Parasitic Infections</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Pharmacogenomics_0.png" alt="" />
+          <p>Pharmacogenomics</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Poisoning_0.png" alt="" />
+          <p>Poisoning</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Pre-eclampsia_0.png" alt="" />
+          <p>Pre-eclampsia</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Prenatal-D.png" alt="" />
+          <p>Prenatal Diagnosis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Psychiatric_0.png" alt="" />
+          <p>Psychiatric Disorders</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Respiratory_0.png" alt="" />
+          <p>Respiratory Disorders</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Sarcoidosis_0.png" alt="" />
+          <p>Sarcoidosis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/SIADH_0.png" alt="" />
+          <p>SIADH</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Surgical_0.png" alt="" />
+          <p>Surgical Pathology</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Therapeutic-Drug_0.png" alt="" />
+          <p>Therapeutic Drug Monitoring</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Thromboembolic_0.png" alt="" />
+          <p>Thromboembolic Disorders</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Transplantation_0.png" alt="" />
+          <p>Transplantation</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Transplantation-1_0.png" alt="" />
+          <p>Transplantation Pathology</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Tuberculosis_0.png" alt="" />
+          <p>Tuberculosis</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Viral-Infections_0.png" alt="" />
+          <p>Viral Infections</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Water-Imbalance_0.png" alt="" />
+          <p>Water Imbalance</p>
+        </div>
+        <div class="carousel-cell test-item">
+          <img src="./Assets/Test menu/Condition/Water-Purity_0.png" alt="" />
+          <p>Water Purity</p>
+        </div>
+      </div>
+
+      <a class="view-all" href="">View All</a>
+    </section>
+
+
+    <!-- FIXED SIDE-ELEMENT -->
+    <div class="side-element">
+      <a href="">
+        <img src="https://uat-cdn.drlallab.com/2022-12/side-img3.png" alt="">
+        <p>Nearest Center</p>
+      </a>
+      <a href="../Book_a_test/book_a_test.html"><img src="https://uat-cdn.drlallab.com/2022-12/side-img2.png" alt="">
+        <p>Book a Test
+
+        </p>
+      </a>
+      <a href=""><img src="https://uat-cdn.drlallab.com/2022-12/footer-upload.png" alt="">
+        <p>Upload Prescription</p>
+      </a>
+      <a href=""> <img src="https://uat-cdn.drlallab.com/2022-12/side-img4.png" alt="">
+        <p>Download Report</p>
+      </a>
+    </div>
+
+    <!-- Our Labs -->
+
+    <section class="labs-container" id="our-labs">
+      <h3>Our Labs</h3>
+      <div class="labs-list main-carousel"
+        data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true}'>
+        <div class="carousel-cell lab-item">
+          <img src="./Assets/Our labs/National Reference Laboratory.jpg" alt="" />
+          <p>National Reference Laboratory</p>
+        </div>
+        <div class="carousel-cell lab-item">
+          <img src="./Assets/Our labs/Kolkata.png" alt="" />
+          <p>Kolkata Reference Laboratory</p>
+        </div>
+        <div class="carousel-cell lab-item">
+          <img src="./Assets/Our labs/Satellite.png" alt="" />
+          <p>Satellite Laboratory</p>
+        </div>
+        <div class="carousel-cell lab-item">
+          <img src="./Assets/Our labs/Kolkata.png" alt="" />
+          <p>Kolkata Reference Laboratory</p>
+        </div>
+      </div>
+
+      <a class="view-all" href="">View Details</a>
+    </section>
+
+    <!-- Whats New -->
+
+    <section class="whats-new-container" id="whats-new">
+      <h3>What's New</h3>
+      <div class="main-carousel"
+        data-flickity='{ "cellAlign": "left", "contain": true, "draggable": true, "pageDots": false, "wrapAround": true, "prevNextButtons": false, "autoPlay": true, "autoPlay": 3000}'>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/new-EM-post.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/MBFD.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/Genexpert-New-Creative-1.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/GAD-65.jpg" alt="" loading="lazy" loading="lazy" />
+        </div>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/new-EM-post.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/MBFD.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/Genexpert-New-Creative-1.jpg" alt="" loading="lazy" />
+        </div>
+        <div class="carousel-cell whats-new-item">
+          <img src="./Assets/What's New/GAD-65.jpg" alt="" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+
+    <section class="events-container" id="events">
+      <h3>Events</h3>
+      <div class="select-menu">
+        <a href="./events.html" target="events">
+          <button class="select-button">
+            All&emsp;&emsp;&emsp;<span>></span>
+          </button>
+        </a>
+        <iframe src="" name="events" frameborder="0"></iframe>
+      </div>
+      <div class="event-buttons">
+        <button class="condition">Upcoming (12)</button>
+        <button class="test-button">Recorded</button>
+      </div>
+
+      <div class="event-list main-carousel"
+        data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "autoPlay": true, "autoPlay": 3000}'>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/1st India Autoimmune Seminar.png" alt="" />
+          <p>Seminar</p>
+          <p class="event-title">1<span>st</span> India Autoimmune Seminar</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/2nd India Autoimmune Seminar.png" alt="" />
+          <p>Seminar</p>
+          <p class="event-title">2<span>nd</span> India Autoimmune Seminar</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/3rd India Autoimmune Seminar.png" alt="" />
+          <p>Seminar</p>
+          <p class="event-title">3<span>rd</span> India Autoimmune Seminar</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/1st India Autoimmune Seminar.png" alt="" />
+          <p>Workshop</p>
+          <p class="event-title">
+            1<span>st</span> India Autoimmune Workshop
+          </p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/2nd India Autoimmune Seminar.png" alt="" />
+          <p>Workshop</p>
+          <p class="event-title">
+            2<span>nd</span> India Autoimmune Workshop
+          </p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/3rd India Autoimmune Seminar.png" alt="" />
+          <p>Workshop</p>
+          <p class="event-title">
+            3<span>rd</span> India Autoimmune Workshop
+          </p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/1st India Autoimmune Seminar.png" alt="" />
+          <p>Webinar</p>
+          <p class="event-title">1<span>st</span> India Autoimmune Webinar</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/2nd India Autoimmune Seminar.png" alt="" />
+          <p>Webinar</p>
+          <p class="event-title">2<span>nd</span> India Autoimmune Webinar</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/3rd India Autoimmune Seminar.png" alt="" />
+          <p>Webinar</p>
+          <p class="event-title">3<span>rd</span> India Autoimmune Webinar</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/1st India Autoimmune Seminar.png" alt="" />
+          <p>eCME</p>
+          <p class="event-title">1<span>st</span> India Autoimmune eCME</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/2nd India Autoimmune Seminar.png" alt="" />
+          <p>eCME</p>
+          <p class="event-title">2<span>nd</span> India Autoimmune eCME</p>
+        </div>
+        <div class="carousel-cell event-item">
+          <img src="./Assets/Events/3rd India Autoimmune Seminar.png" alt="" />
+          <p>eCME</p>
+          <p class="event-title">3<span>rd</span> India Autoimmune eCME</p>
+        </div>
+      </div>
+
+      <a class="view-all" href="">View All</a>
+    </section>
+
+    <!-- Quality -->
+
+    <section class="quality-container" id="quality">
+      <h3>Quality</h3>
+      <div class="quality-items-container">
+        <div class="quality-item">
+          <img src="./Assets/Quality/q7.png" alt="" />
+          <div class="quality-points">
+            <span>600+</span>
+            <p>Instruments used for real time QC monitoring</p>
+          </div>
+        </div>
+        <div class="quality-item">
+          <img src="./Assets/Quality/q8.png" alt="" />
+          <div class="quality-points">
+            <span>50+</span>
+            <p>Quality Checks & Processes on Every Sample</p>
+          </div>
+        </div>
+        <div class="quality-item">
+          <img src="./Assets/Quality/q9.png" alt="" />
+          <div class="quality-points">
+            <span>15+</span>
+            <p>Quality indicator monitored on daily basis</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="view-all" href="">Know More</a>
+    </section>
+
+    <!-- Accreditation & Certification -->
+
+    <section class="achievements-container">
+      <div class="accreditation-container">
+        <h3>Accreditation (National Reference Laboratory at Rohini)</h3>
+        <div class="accreditation-items">
+          <img src="./Assets/Accreditation and Certifications/Accreditation/LPLPTPsymbol.png" alt="" />
+          <img src="./Assets/Accreditation and Certifications/Accreditation/accreditation1[1].png" alt="" />
+          <img src="./Assets/Accreditation and Certifications/Accreditation/accreditation2[1].png" alt="" />
+        </div>
+      </div>
+      <div class="certification-container">
+        <h3>Certifications</h3>
+        <div class="certification-items">
+          <div class="certification-details">
+            <img src="./Assets/Accreditation and Certifications/Certifications/accre_iso_new.png" alt="" />
+            <p class="certification-title">
+              National Reference Laboratory at Rohini, Kolkata Reference
+              Laboratory at Kolkata
+            </p>
+          </div>
+          <div class="certification-details">
+            <img src="./Assets/Accreditation and Certifications/Certifications/accre_bsi.svg" alt="" />
+            <p>National Reference Laboratory at Rohini</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resource Centre -->
+
+    <section class="resources-container" id="resource-center">
+      <h3>Resource Centre</h3>
+      <div class="resources">
+        <div class="resource-items">
+          <img src="./Assets/Resource Center/Articles.png" alt="" />
+          <p>Newsletter</p>
+        </div>
+        <div class="resource-items">
+          <img src="./Assets/Resource Center/lable-for-brouchure.png" alt="" />
+          <p>Brochure</p>
+        </div>
+        <div class="resource-items">
+          <img src="./Assets/Resource Center/Publications.png" alt="" />
+          <p>Publications</p>
+        </div>
+        <div class="resource-items">
+          <img src="./Assets/Resource Center/video.png" alt="" />
+          <p>Video</p>
+        </div>
+      </div>
+
+      <a class="view-all" href="">View All</a>
+    </section>
+
+    <!-- Our Department -->
+
+    <section class="department-container" id="our-departments">
+      <h3>Our Departments</h3>
+      <div class="main-carousel departments"
+        data-flickity='{ "cellAlign": "left", "draggable": true, "pageDots": false, "wrapAround": true, "prevNextButtons": false}'>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-1[1].png" alt="" />
+          <p>Histopathology & <br />Cytopathology</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-2[1].png" alt="" />
+          <p>Clinical Cytogenetic</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-3[1].png" alt="" />
+          <p>Flow Cytometry</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-4[1].png" alt="" />
+          <p>Molecular Diagnostics</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-5[1].png" alt="" />
+          <p>Haematology & Immunology</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-6[1].png" alt="" />
+          <p>
+            Renal Pathology & Electron <br />
+            Microscopy
+          </p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-1[1].png" alt="" />
+          <p>Histopathology & <br />Cytopathology</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-2[1].png" alt="" />
+          <p>Clinical Cytogenetic</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-3[1].png" alt="" />
+          <p>Flow Cytometry</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-4[1].png" alt="" />
+          <p>Molecular Diagnostics</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-5[1].png" alt="" />
+          <p>Haematology & Immunology</p>
+        </div>
+        <div class="carousel-cell department-items">
+          <img src="./Assets/Our Departments/Our-Departments-6[1].png" alt="" />
+          <p>
+            Renal Pathology & Electron <br />
+            Microscopy
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Section-->
+
+    <section class="app-container">
+      <div class="links-container">
+        <h3>Download Health Connect App:</h3>
+        <div class="app-links">
+          <img class="android" src="./Assets/Download-app/Android.png" alt="" />
+          <img class="ios" src="./Assets/Download-app/IOS.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe to our Latest Blogs -->
+
+    <section class="blog-subscription-container">
+      <h3>Subscribe to our Latest Blogs</h3>
+      <input class="email-box" type="email" name="email" id="email" placeholder="Your Email id" required />
+      <button type="submit">Submit</button>
+    </section>
+
+    <!-- Frequently Asked Questions-->
+
+    <section class="faq-container" id="faq">
+      <h3>Frequently Asked Questions</h3>
+      <ul class="faq-buttons-container">
+        <li>
+          <a href="./FAQ-section/labs-faq.html" target="FAQS">
+            <button class="labs">Labs and Centers</button>
+          </a>
+        </li>
+        <li>
+          <a href="./FAQ-section/reports.html" target="FAQS"><button class="faq-button reports">Reports</button></a>
+        </li>
+        <li>
+          <a href="./FAQ-section/test-booking.html" target="FAQS"><button class="faq-button booking">Test
+              Booking</button></a>
+        </li>
+        <li>
+          <a href="./FAQ-section/wellness-faq.html" target="FAQS"><button class="faq-button wellness">Wellness
+              Packages</button></a>
+        </li>
+      </ul>
+
+      <!-- <div class="faq-question">
+            <i class="fa-sharp fa-solid fa-chevron-down"></i>
+            <p class="question">Q.How many labs and centres does LPL have at present?</p>
+        </div>
+        <div class="faq-question">
+            <i class="fa-sharp fa-solid fa-chevron-down"></i>
+            <p class="question">Q.How can I find out information regarding a particular lab/center?</p>
+        </div> -->
+      <iframe name="FAQS" src="./FAQ-section/labs-faq.html" frameborder="0"></iframe>
+
+      <a href="" class="view-all">View All</a>
+    </section>
+
+    <!-- Reach out to Us-->
+
+    <section class="reach-out">
+      <button>Reach out to us</button>
+    </section>
+
+    <!-- Lab Test At Home-->
+
+    <section class="lab-testAtHome">
+      <div class="lab-test-container">
+        <div class="lab-test-content">
+          <h1>Lab Test At Home</h1>
+          <div class="location-list">
+            <div><a href="#">Agra</a></div>
+            <div>|</div>
+            <div><a href="#">Ahmedabad</a></div>
+            <div>|</div>
+            <div><a href="#">Ajmer</a></div>
+            <div>|</div>
+            <div><a href="#">Akola</a></div>
+            <div>|</div>
+            <div><a href="#">Allahabad</a></div>
+            <div>|</div>
+            <div><a href="#">Amravati</a></div>
+            <div>|</div>
+            <div><a href="#">Amritsar</a></div>
+            <div>|</div>
+            <div><a href="#">Aurangabad</a></div>
+            <div>|</div>
+            <div><a href="#">Bangalore</a></div>
+            <div>|</div>
+            <div><a href="#">Bhilai</a></div>
+            <div>|</div>
+            <div><a href="#">Bhopal</a></div>
+            <div>|</div>
+            <div><a href="#">Bhubaneswar</a></div>
+            <div>|</div>
+            <div><a href="#">Bhavnagar</a></div>
+            <div>|</div>
+            <div><a href="#">Bhiwandi</a></div>
+            <div>|</div>
+            <div><a href="#">Bikaner</a></div>
+            <div>|</div>
+            <div><a href="#">Bilaspur</a></div>
+            <div>|</div>
+            <div><a href="#">Bokaro</a></div>
+            <div>|</div>
+            <div><a href="#">Chandrapur</a></div>
+            <div>|</div>
+            <div><a href="#">Chennai</a></div>
+            <div>|</div>
+            <div><a href="#">Coimbatore</a></div>
+            <div>|</div>
+            <div><a href="#">Cuttack</a></div>
+            <div>|</div>
+            <div><a href="#">Dhanbad</a></div>
+            <div>|</div>
+            <div><a href="#">Dehradun</a></div>
+            <div>|</div>
+            <div><a href="#">Delhi</a></div>
+            <div>|</div>
+            <div><a href="#">Erode</a></div>
+            <div>|</div>
+            <div><a href="#">Faridabad</a></div>
+            <div>|</div>
+            <div><a href="#">Gandhinagar</a></div>
+            <div>|</div>
+            <div><a href="#">Ghaziabad</a></div>
+            <div>|</div>
+            <div><a href="#">Gorakhpur</a></div>
+            <div>|</div>
+            <div><a href="#">Guntur</a></div>
+            <div>|</div>
+            <div><a href="#">Gurgaon</a></div>
+            <div>|</div>
+            <div><a href="#">Guwahati</a></div>
+            <div>|</div>
+            <div><a href="#">Hisar</a></div>
+            <div>|</div>
+            <div><a href="#">Hubli-Dharwad</a></div>
+            <div>|</div>
+            <div><a href="#">Hyderabad</a></div>
+            <div>|</div>
+            <div><a href="#">Imphal</a></div>
+            <div>|</div>
+            <div><a href="#">Indore</a></div>
+            <div>|</div>
+            <div><a href="#">Jabalpur</a></div>
+            <div>|</div>
+            <div><a href="#">Jamnagar</a></div>
+            <div>|</div>
+            <div><a href="#">Kochi</a></div>
+            <div>|</div>
+            <div><a href="#">Kolhapur</a></div>
+            <div>|</div>
+            <div><a href="#">Kolkata</a></div>
+            <div>|</div>
+            <div><a href="#">Kota</a></div>
+            <div>|</div>
+            <div><a href="#">Kottayam</a></div>
+            <div>|</div>
+            <div><a href="#">Kozhikode</a></div>
+            <div>|</div>
+            <div><a href="#">Kurnool</a></div>
+            <div>|</div>
+            <div><a href="#">Latur</a></div>
+            <div>|</div>
+            <div><a href="#">Lucknow</a></div>
+            <div>|</div>
+            <div><a href="#">Ludhiana</a></div>
+            <div>|</div>
+            <div><a href="#">Madurai</a></div>
+            <div>|</div>
+            <div><a href="#">Malegaon</a></div>
+            <div>|</div>
+            <div><a href="#">Mumbai</a></div>
+            <div>|</div>
+            <div><a href="#">Mysore</a></div>
+            <div>|</div>
+            <div><a href="#">Nadiad</a></div>
+            <div>|</div>
+            <div><a href="#">Nagpur</a></div>
+            <div>|</div>
+            <div><a href="#">Nanded</a></div>
+            <div>|</div>
+            <div><a href="#">Nashik</a></div>
+            <div>|</div>
+            <div><a href="#">Nellore</a></div>
+            <div>|</div>
+            <div><a href="#">Noida</a></div>
+            <div>|</div>
+            <div><a href="#">Orai</a></div>
+            <div>|</div>
+            <div><a href="#">Patiala</a></div>
+            <div>|</div>
+            <div><a href="#">Patna</a></div>
+            <div>|</div>
+            <div><a href="#">Pimpri-Chinchwad</a></div>
+            <div>|</div>
+            <div><a href="#">Pune</a></div>
+            <div>|</div>
+            <div><a href="#">Purnia</a></div>
+            <div>|</div>
+            <div><a href="#">Raipur</a></div>
+            <div>|</div>
+            <div><a href="#">Rajahmundry</a></div>
+            <div>|</div>
+            <div><a href="#">Rajkot</a></div>
+            <div>|</div>
+            <div><a href="#">Ramagundam</a></div>
+            <div>|</div>
+            <div><a href="#">Ranchi</a></div>
+            <div>|</div>
+            <div><a href="#">Ratlam</a></div>
+            <div>|</div>
+            <div><a href="#">Rohtak</a></div>
+            <div>|</div>
+            <div><a href="#">Saharanpur</a></div>
+            <div>|</div>
+            <div><a href="#">Salem</a></div>
+            <div>|</div>
+            <div><a href="#">Shimla</a></div>
+            <div>|</div>
+            <div><a href="#">Sikar</a></div>
+            <div>|</div>
+            <div><a href="#">Sirsa</a></div>
+            <div>|</div>
+            <div><a href="#">Solapur</a></div>
+            <div>|</div>
+            <div><a href="#">Sonipat</a></div>
+            <div>|</div>
+            <div><a href="#">Srinagar</a></div>
+            <div>|</div>
+            <div><a href="#">Surat</a></div>
+            <div>|</div>
+            <div><a href="#">Thane</a></div>
+            <div>|</div>
+            <div><a href="#">Thiruvananthapuram</a></div>
+            <div>|</div>
+            <div><a href="#">Thrissur</a></div>
+            <div>|</div>
+            <div><a href="#">Tirunelveli</a></div>
+            <div>|</div>
+            <div><a href="#">Udaipur</a></div>
+            <div>|</div>
+            <div><a href="#">Ulhasnagar</a></div>
+            <div>|</div>
+            <div><a href="#">Ujjain</a></div>
+            <div>|</div>
+            <div><a href="#">Vadodara</a></div>
+            <div>|</div>
+            <div><a href="#">Varanasi</a></div>
+            <div>|</div>
+            <div><a href="#">Vasai-Virar</a></div>
+            <div>|</div>
+            <div><a href="#">Vellore</a></div>
+            <div>|</div>
+            <div><a href="#">Vijayawada</a></div>
+            <div>|</div>
+            <div><a href="#">Visakhapatnam</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Test -->
+
+    <section class="popular-test">
+      <div class="popular-test-container">
+        <div class="popular-test-content">
+          <h6>Popular Tests</h6>
+          <div class="popular-test-list">
+            <div><a href="#">Pregnancy Test</a></div>
+            <div>|</div>
+            <div><a href="#">Full Body Checkups</a></div>
+            <div>|</div>
+            <div><a href="#">Covid 19 Test</a></div>
+            <div>|</div>
+            <div><a href="#">Heart Test</a></div>
+            <div>|</div>
+            <div><a href="#">Kidney Test</a></div>
+            <div>|</div>
+            <div><a href="#">Liver Test</a></div>
+            <div>|</div>
+            <div><a href="#">CBC Test</a></div>
+            <div>|</div>
+            <div><a href="#">Cholesterol Test</a></div>
+            <div>|</div>
+            <div><a href="#">HbA1c Test</a></div>
+            <div>|</div>
+            <div><a href="#">Hepatitis B Test</a></div>
+            <div>|</div>
+            <div><a href="#">Kidney Function Test</a></div>
+            <div>|</div>
+            <div><a href="#">Liver Function Test</a></div>
+            <div>|</div>
+            <div><a href="#">Sugar Test</a></div>
+            <div>|</div>
+            <div><a href="#">Thyroid Test</a></div>
+            <div>|</div>
+            <div><a href="#">Typhoid Test</a></div>
+            <div>|</div>
+            <div><a href="#">Uric Acid Test</a></div>
+            <div>|</div>
+            <div><a href="#">Vitamin B12 Test</a></div>
+            <div>|</div>
+            <div><a href="#">Vitamin D Test</a></div>
+            <div>|</div>
+            <div><a href="#">Allergy Test</a></div>
+            <div>|</div>
+            <div><a href="#">Arthritis Test</a></div>
+            <div>|</div>
+            <div><a href="#">Cancer Test</a></div>
+            <div>|</div>
+            <div><a href="#">Bone And Joint</a></div>
+            <div>|</div>
+            <div><a href="#">Dengue Test</a></div>
+            <div>|</div>
+            <div><a href="#">Diabetes Test</a></div>
+            <div>|</div>
+            <div><a href="#">Rheumatoid Test</a></div>
+            <div>|</div>
+            <div><a href="#">Tuberculosis Test</a></div>
+            <div>|</div>
+            <div><a href="#">Infertility Test</a></div>
+            <div>|</div>
+            <div><a href="#">Diabetes Care</a></div>
+            <div>|</div>
+            <div><a href="#">Anemia Test</a></div>
+            <div>|</div>
+            <div><a href="#">GastroIntestinal</a></div>
+            <div>|</div>
+            <div><a href="#">Autoimmune Disorders</a></div>
+            <div>|</div>
+            <div><a href="#">Fever Test</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Top-->
+
+  <div class="backtotop">
+    <a href="#top">
+      <img src="https://uat-cdn.drlallab.com/images/down-link-top.png" alt="">
+    </a>
+  </div>
+
+  <!-- Footer -->
+
+  <section class="footer-section">
+    <footer class="footer-top">
+      <div class="footer-links">
+        <div class="link_col">
+          <h2>patients</h2>
+          <div class="links">
+            <a href="">book a test</a>
+            <a href="">nearest center</a>
+            <a href="">download report</a>
+            <a href="">download app</a>
+            <a href="">promotion & discount</a>
+            <a href="">special programs</a>
+          </div>
+        </div>
+        <div class="link_col">
+          <h2>doctors</h2>
+          <div class="links">
+            <a href="">Test menu</a>
+            <a href="">our labs</a>
+            <a href="">events</a>
+            <a href="">quality</a>
+            <a href="">resource center</a>
+            <a href="">our departments</a>
+          </div>
+        </div>
+        <div class="link_col">
+          <h2>Bussiness partners</h2>
+          <div class="links">
+            <a href="">partner with us</a>
+            <a href="">become a vendor</a>
+            <a href="">corporate tie up</a>
+            <a href="">international partneship</a>
+            <a href="">corporate covid testing</a>
+          </div>
+        </div>
+        <div class="link_col">
+          <h2>About us</h2>
+          <div class="links">
+            <a href="">our journey</a>
+            <a href="">vision mission & values</a>
+            <a href="">our team</a>
+            <a href="">our network</a>
+            <a href="">logistics strength</a>
+            <a href="">CSR</a>
+            <a href="">career</a>
+          </div>
+        </div>
+        <div class="link_col">
+          <h2>INVESTORS</h2>
+          <div class="links">
+            <a href="">financials</a>
+            <a href="">investors information</a>
+            <a href="">corpotate governance</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-bottom">
+      <div class="copyright">
+        <div class="footer-info">
+          <h4>2023 © LalPathLabs.com. All rights reserved. ---v1.23.08.1</h4>
+          <div>
+            <a href="">blogs |</a>
+            <a href=""> csr |</a>
+            <a href="">terms of use |</a>
+            <a href="">privacy policy |</a>
+            <a href="">cookie policy |</a>
+            <a href="">site map </a>
+          </div>
+          <p>
+            Only Pathology reports available online. For X-Ray, Ultrasound,
+            ECG, TMT, Echo, PFT, Uroflowmetry reports, please visit the
+            concerned center where test has been conducted.
+          </p>
+        </div>
+        <div class="follow_us">
+          <span>follow us on:</span>
+          <div class="social_icons">
+            <i class="fa-brands fa-facebook-f footer_icons"></i>
+            <i class="fa-brands fa-youtube footer_icons"></i>
+            <i class="fa-brands fa-linkedin-in footer_icons"></i>
+            <i class="fa-brands fa-twitter footer_icons"></i>
+            <i class="fa-brands fa-instagram footer_icons"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!--\\\\ Chat Box Section ////-->
+
+  <label class="lets-chat" data-aos="fade-up"
+  data-aos-anchor-placement="top-bottom" for="lets-chat">
+    <i class="fa-solid fa-message"></i>
+    <p>Let's Chat!</p>
+  </label>
+  <input type="checkbox" name="lets-chat" id="lets-chat" class="hide-input" hidden />
+
+  <div class="chat-form">
+    <div class="helpline">
+      <img src="https://haptikappimg.haptikapi.com/uploads/95a6b73ddfee72e3c9014f95f064db84.png?w=256&h=144" alt="" />
+      <div class="helpline-details">
+        <span class="LPL">LPL</span>
+        <p class="chat-helpline">24/7 Chat Helpline</p>
+      </div>
+    </div>
+    <div class="main-content">
+      <p class="privacy">
+        Your privacy matters to us! Learn how we protect your data
+        <a href="">here</a>
+      </p>
+      <div class="message">
+        <p class="time">a few seconds ago</p>
+        <p class="welcome-text">
+          👋 Hello! Welcome to <strong>Dr Lal PathLabs</strong>, where we
+          focus on providing quality diagnostic services 🏥<br /><br />
+
+          Please select any of the below topics 👇
+        </p>
+      </div>
+    </div>
+    <div class="text-box">
+      <div class="chat-menu">
+        <span>Menu</span> <i class="fa-solid fa-angle-up"></i>
+      </div>
+      <input type="text" placeholder="Type here..." />
+      <p class="haptik">Powered by <span>haptik</span></p>
+    </div>
+  </div>
+
+  <!--\\\\ Chat Box Section ////-->
+
+  <script src="https://kit.fontawesome.com/d191351939.js" crossorigin="anonymous"></script>
+  <script src="./flickity.pkgd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
