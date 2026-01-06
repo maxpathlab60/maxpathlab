@@ -9,11 +9,39 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./fevicon.png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
 </head>
 
 <body>
 
-    <header id="top">
+    <!-- MOBILE NAVBAR -->
+    <header class="mobile-nav">
+    <div class="mobile-bar">
+        <a href="./index.html">
+        <img src="../logo-h.jpeg" alt="Max Path Lab" class="mobile-logo">
+        </a>
+
+        <button id="mobileToggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="./index.html">Home</a>
+        <a href="../Book_a_test/dist/book_a_test.html">Book a Test</a>
+        <a href="#special-program">Special Programs</a>
+        <a href="#promotion">Promotions</a>
+        <a href="../About_us/about.html">About Us</a>
+        <a href="../Contact_us/contact.html">Contact Us</a>
+        <a href="http://103.134.113.137/franchises/">Login</a>
+    </nav>
+    </header>
+
+    <header id="top" class="desktop-nav">
         <!-- Top-NAVBAR -->
         <nav class="navbar-top">
             <div class="nav-content">
@@ -95,146 +123,7 @@
                         </div>
                     </div> -->
 
-                    <div class="search-test">
-                        <!-- On click Side Menu For Small screen -->
-                        <div class="j-menu">
-                            <input type="checkbox" id="checkbox">
-                            <label for="checkbox" class="click-me-icon"><i class="fa-solid fa-bars"></i></label>
-                            <div class="menu-container">
-
-                                <div class="user menu-content">
-                                    <div>
-                                        <a href="http://103.134.113.137/franchises/"><img src="https://uat-cdn.drlallab.com/images/Profile-16.png"
-                                                alt=""><span>Login</span></a>
-                                    </div>
-                                    <div class="close">
-                                        <a href=""><i class="fa-solid fa-xmark"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="menu-content patient-arrow">
-                                    <div class="patient-container">
-                                        <a href="./index.html">
-                                            <img src="https://uat-cdn.drlallab.com/images/mbl-menu1.png"
-                                                alt=""><span>HOME</span>
-                                            <!-- <div class="down-arrow">
-                                                <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
-                                            </div> -->
-                                        </a>
-                                        <!-- <div class="patient-list">
-                                            <ul>
-                                                <li>Book a Test</li>
-                                                <li>Nearest Center</li>
-                                                <li>Download Report</li>
-                                                <li>Special Programs</li>
-                                                <li>Promotion & Discounts</li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
-
-                                </div>
-
-                                <!-- <div class="menu-content">
-                                     <div>
-                                        <a href="../Doctors/doctors.html">
-                                            <img src="https://uat-cdn.drlallab.com/images/mbl-menu2.png"
-                                                alt=""><span>DOCTORS</span>
-                                        </a>
-                                    </div> 
-                                    <div class="down-arrow">
-                                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
-                                    </div> 
-                                </div> -->
-
-                                <div class="menu-content">
-                                    <div>
-                                        <!-- <a href="Bussiness/business.html">
-                                            <img src="https://uat-cdn.drlallab.com/images/mbl-menu3.png"
-                                                alt=""><span>BUSINESS PARTNERSHIP</span>
-                                        </a> -->
-                                    </div>
-                                    <!-- <div class="down-arrow">
-                                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
-                                    </div> -->
-                                </div>
-
-                                <div class="menu-content">
-                                    <div>
-                                        <a href="About_us/about.html">
-                                            <img src="https://uat-cdn.drlallab.com/images/mbl-menu4.png"
-                                                alt=""><span>ABOUT</span>
-                                        </a>
-                                    </div>
-                                    <!-- <div class="down-arrow">
-                                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
-                                    </div> -->
-                                </div>
-
-                                <div class="menu-content">
-                                    <div>
-                                        <!-- <a href="Investors/dist/investors.html">
-                                            <img src="https://uat-cdn.drlallab.com/images/mbl-menu5.png"
-                                                alt=""><span>INVESTORS</span>
-                                        </a> -->
-                                    </div>
-                                    <!-- <div class="down-arrow">
-                                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
-                                    </div> -->
-                                </div>
-
-                                <div class="menu-content">
-                                    <div>
-                                        <a href="./Contact_us/contact.html">
-                                            <img src="https://uat-cdn.drlallab.com/images/mbl-menu6.png"
-                                                alt=""><span>CONTACT
-                                                US</span>
-                                        </a>
-                                    </div>
-                                    <!-- <div class="down-arrow">
-                                        <img src="https://uat-cdn.drlallab.com/2022-12/mbl-arrow1.png" alt="">
-                                    </div> -->
-                                </div>
-
-                                <!-- <div class="menu-content oad-app">
-                                    <div>
-                                        <a href="../Contact_us/contact.html">
-                                            <span>BLOG | FAQS</span>
-                                        </a>
-                                    </div>
-                                </div> -->
-
-                                <!-- <div class="menu-content download-app">
-                                    <div>
-                                        <a href="../Contact_us/contact.html">
-                                            <span>Download App</span><span><img
-                                                    src="https://uat-cdn.drlallab.com/2022-12/mbl-app1.png" alt=""> |
-                                                <img src="https://uat-cdn.drlallab.com/2022-12/mbl-app2.png"
-                                                    alt=""></span>
-                                        </a>
-                                    </div>
-                                </div> -->
-
-                                <!-- <div class="menu-content download-app">
-                                    <div>
-                                        <a href="../Contact_us/contact.html">
-                                            <span>Download App</span><span>
-                                                <img src="https://uat-cdn.drlallab.com/2022-12/mbl-social1.png" alt="">
-                                                <img src="https://uat-cdn.drlallab.com/2022-12/mbl-social2.png" alt="">
-                                                <img src="https://uat-cdn.drlallab.com/2022-12/mbl-social3.png" alt="">
-                                                <img src="https://uat-cdn.drlallab.com/2022-12/mbl-youtube.png" alt="">
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div> -->
-                            </div>
-                        </div>
-
-                        <!-- <form action="">
-                            <input type="text" placeholder="Search Test & Packages">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </form> -->
-                        <div class="call"><i class="fa-solid fa-phone-volume"></i></div>
-                    </div>
+                   
                     <!-- <div class="cart"><img src="https://uat-cdn.drlallab.com/2022-12/cart-plus.png" alt=""></div> -->
                 </div>
             </div>
@@ -1381,7 +1270,62 @@
         </footer>
     </section>
 
-    <script src="https://kit.fontawesome.com/7c5861f7d9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7c5861f7d9.js" crossorigin="anonymous">
+    document.querySelectorAll(".program-carausel").forEach(carousel => {
+  const track = carousel.querySelector(".program-carausel-content, .popular-test-content, .test-packages-content");
+  if (!track) return;
+
+  const left = carousel.querySelector(".fa-angle-left");
+  const right = carousel.querySelector(".fa-chevron-right");
+
+  let position = 0;
+  const itemWidth = track.children[0].offsetWidth + 20;
+  const maxScroll = track.scrollWidth - carousel.offsetWidth;
+
+  right?.addEventListener("click", () => {
+    position = Math.min(position + itemWidth, maxScroll);
+    track.style.transform = `translateX(-${position}px)`;
+  });
+
+  left?.addEventListener("click", () => {
+    position = Math.max(position - itemWidth, 0);
+    track.style.transform = `translateX(-${position}px)`;
+  });
+});    
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobileToggle");
+  const menu = document.getElementById("mobileMenu");
+
+  if (!toggle || !menu) {
+    console.error("Mobile nav elements not found");
+    return;
+  }
+
+  toggle.addEventListener("click", function () {
+    menu.classList.toggle("show");
+  });
+});
+    
+
+
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobileToggle");
+  const menu = document.getElementById("mobileMenu");
+
+  if (!toggle || !menu) {
+    console.error("Mobile menu elements not found");
+    return;
+  }
+
+  toggle.addEventListener("click", function () {
+    menu.classList.toggle("show");
+  });
+});
+</script>
+
 </body>
 
 </html>
