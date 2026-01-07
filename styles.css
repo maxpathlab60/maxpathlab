@@ -2442,7 +2442,7 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
   }
 
   .mobile-logo {
-    height: 48px;
+    height: 80px;
   }
 
   #mobileToggle {
