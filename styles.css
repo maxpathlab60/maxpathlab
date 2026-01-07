@@ -2568,3 +2568,12 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
 .stop-animation {
   animation: none !important;
 }
+
+.services-content {
+  animation: special 20s infinite;
+}
+
+.program-carausel-content {
+  animation: special 40s linear infinite;
+}
+.services-content     { animation: special 45s linear infinite; }

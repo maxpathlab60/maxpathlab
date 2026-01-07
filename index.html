@@ -448,72 +448,79 @@ document.addEventListener("DOMContentLoaded", function () {
         </section>
 
         <!-- SEARCH TEST AND PACKAGES SECTION-->
-        <section class="test-packages">
-            <div class="centerr">
-                <div class="test-packages-container">
-                    <p>Services and Package</p>
-                    <div class="test-package-header">
-                        <!-- <div class="test-packages-button">
-                            <a href="" class="lifestyle faq-button">Lifestyle Disorder</a>
-                            <a href="" class="condition faq-button">Condition</a>
-                            <a href="" class="alphabet faq-button">Alphabet</a>
-                        </div> -->
-                        <!-- <div class="test-searchBar">
-                            <input type="text" placeholder="Search Test">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div> -->
-                    </div>
-                    <div class="program-carausel">
-                        <div class="program-carausel-content">
-                                                   <div class="test-packages-content">
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img5.png" alt="">
-                                <p>Allergy</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/search-test5.png" alt="">
-                                <p>Infertility</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon2.png" alt="">
-                                <p>Liver</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-08/testmenu-icon1.png" alt="">
-                                <p>Heart</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon3.png" alt="">
-                                <p>Lungs</p>
-                            </div>
+      <!-- SEARCH TEST AND PACKAGES SECTION -->
+<section class="test-packages">
+  <div class="centerr">
+    <div class="test-packages-container">
+      <p>Services and Package</p>
 
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon4.png" alt="">
-                                <p>Kidney</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-08/blog-popup-img6.png" alt="">
-                                <p>CBC</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-08/thyroid.png" alt="">
-                                <p>Thyroid</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-08/vitamin%20d.png" alt="">
-                                <p>Vitamin D</p>
-                            </div>
+      <div class="test-package-header">
+        <!-- header content (buttons / search if needed later) -->
+      </div>
 
-                        </div>
-                        </div>
- 
-                        <i class="fa-solid fa-angle-left"></i>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                    <!-- <div class="view-all"><a href="">View All</a></div> -->
-                </div>
-            </div>
-        </section>
+      <!-- ✅ REQUIRED WRAPPER -->
+      <div class="program-carausel services-carausel">
+
+        <!-- ✅ MOVING CONTENT -->
+        <div class="program-carausel-content services-content">
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-07/special-img5.png" alt="">
+            <p>Allergy</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-07/search-test5.png" alt="">
+            <p>Infertility</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon2.png" alt="">
+            <p>Liver</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-08/testmenu-icon1.png" alt="">
+            <p>Heart</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon3.png" alt="">
+            <p>Lungs</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon4.png" alt="">
+            <p>Kidney</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-08/blog-popup-img6.png" alt="">
+            <p>CBC</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-08/thyroid.png" alt="">
+            <p>Thyroid</p>
+          </div>
+
+          <div class="program-items">
+            <img src="https://uat-cdn.drlallab.com/2021-08/vitamin%20d.png" alt="">
+            <p>Vitamin D</p>
+          </div>
+
+        </div>
+
+        <!-- ✅ FIXED ARROWS -->
+        <i class="fa-solid fa-angle-left" id="svc-left"></i>
+        <i class="fa-solid fa-chevron-right" id="svc-right"></i>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         <!-- Why-LALPATHLABS SECTION -->
         <section class="Why-LalPathLabs">
@@ -1287,48 +1294,64 @@ document.addEventListener("DOMContentLoaded", function () {
         </footer>
     </section>
 
-   <script>
-function controlledCarousel(wrapper, track, leftBtn, rightBtn) {
-  let index = 0;
-  const itemWidth = track.children[0].offsetWidth;
-  const maxIndex = track.children.length - Math.floor(wrapper.offsetWidth / itemWidth);
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
 
-  function stopAnimation() {
-    track.classList.add("stop-animation");
+  function controlledCarousel(wrapper, track, leftBtn, rightBtn) {
+    let index = 0;
+
+    const item = track.querySelector(".program-items");
+    if (!item) return;
+
+    const itemWidth = item.offsetWidth;
+    const maxIndex = track.children.length - Math.floor(wrapper.offsetWidth / itemWidth);
+
+    function stopAnimation() {
+      track.classList.add("stop-animation");
+    }
+
+    function update() {
+      track.style.transform = `translateX(${-index * itemWidth}px)`;
+    }
+
+    rightBtn.addEventListener("click", () => {
+      stopAnimation();
+      if (index < maxIndex) index++;
+      update();
+    });
+
+    leftBtn.addEventListener("click", () => {
+      stopAnimation();
+      if (index > 0) index--;
+      update();
+    });
   }
 
-  function update() {
-    track.style.transform = `translateX(${-index * itemWidth}px)`;
-  }
+  // Special Programs
+  controlledCarousel(
+    document.querySelector(".program-carausel"),
+    document.querySelector(".program-carausel-content"),
+    document.getElementById("sp-left"),
+    document.getElementById("sp-right")
+  );
 
-  rightBtn.addEventListener("click", () => {
-    stopAnimation();
-    if (index < maxIndex) index++;
-    update();
-  });
+  // Popular Tests
+  controlledCarousel(
+    document.querySelector(".popula-carausel"),
+    document.querySelector(".popular-test-content"),
+    document.getElementById("pt-left"),
+    document.getElementById("pt-right")
+  );
 
-  leftBtn.addEventListener("click", () => {
-    stopAnimation();
-    if (index > 0) index--;
-    update();
-  });
-}
+  // Services & Packages ✅
+  controlledCarousel(
+    document.querySelector(".services-carausel"),
+    document.querySelector(".services-content"),
+    document.getElementById("svc-left"),
+    document.getElementById("svc-right")
+  );
 
-/* Special Programs */
-controlledCarousel(
-  document.querySelector(".program-carausel"),
-  document.querySelector(".program-carausel-content"),
-  document.getElementById("sp-left"),
-  document.getElementById("sp-right")
-);
-
-/* Popular Tests */
-controlledCarousel(
-  document.querySelector(".popula-carausel"),
-  document.querySelector(".popular-test-content"),
-  document.getElementById("pt-left"),
-  document.getElementById("pt-right")
-);
+});
 </script>
 
 
