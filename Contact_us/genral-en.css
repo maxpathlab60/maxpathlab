@@ -184,3 +184,31 @@ button:hover {
     display: none !important;
   }
 }
+
+
+
+
+
+@media screen and (max-width:768px){
+
+  .side-element a{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8px 0;
+  }
+
+  .side-element a img{
+      height: 22px;
+      width: auto;
+  }
+
+  .side-element a p{
+      font-size: 11px;
+      margin: 4px 0 0;
+      white-space: nowrap;
+  }
+}
