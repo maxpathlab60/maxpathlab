@@ -141,7 +141,8 @@ button:hover {
   }
 
   .mobile-logo {
-    height: 45px;
+    height: 80px;
+    margin-right: 280px;
   }
 
   #mobileToggle {

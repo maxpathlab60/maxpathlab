@@ -2622,3 +2622,13 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
         height: 180px;
     }
 }
+
+
+.program-carausel {
+  overflow: hidden;
+}
+
+.program-carausel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
