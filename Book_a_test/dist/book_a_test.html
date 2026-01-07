@@ -26,12 +26,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInputs = document.querySelectorAll(".testSearch");
+  const cards = document.querySelectorAll(".test-card");
+
+  if (!searchInputs.length || !cards.length) return;
+
+  searchInputs.forEach(input => {
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase().trim();
+
+      cards.forEach(card => {
+        const title = card.querySelector("h3")?.innerText.toLowerCase() || "";
+        card.style.display = title.includes(query) ? "block" : "none";
+      });
+    });
+  });
+});
+</script>
+
+
 <!-- MOBILE NAVBAR -->
 <header class="mobile-nav">
   <div class="mobile-bar">
     <a href="../../index.html">
       <img src="../../logo-h.jpeg" alt="Max Path Lab" class="mobile-logo">
     </a>
+    <input
+  type="text"
+  
+  placeholder="Search tests..."
+  class="testSearch w-full md:w-1/2 p-2 mb-4 border border-gray-300 rounded-md outline-none"
+/>
+
 
     <button id="mobileToggle" aria-label="Open Menu">
       <i class="fa-solid fa-bars"></i>
@@ -43,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <a href="./book_a_test.html">Book a Test</a>
     <a href="../../About_us/about.html">About Us</a>
     <a href="../../Contact_us/contact.html">Contact Us</a>
-    <a href="http://103.134.113.137/franchises/">Login</a>
+    <a href="https://lab.maxpathlab.com/franchises/">Login</a>
   </nav>
 </header>
 
@@ -84,33 +112,42 @@ document.addEventListener("DOMContentLoaded", function () {
     </nav>
     <div class="w-full flex flex-row max-xl:flex-wrap max-xl:items-center max-xl:justify-center max-xl:w-full">
       <div class="flex flex-col flex-wrap w-80 justify-center items-center lg:text-left">
-        <img src="../../logo-h.jpeg" alt="logo-image"
+        <a href="../../index.html">
+          <img src="../../logo-h.jpeg" alt="logo-image"
             class="logo-img">
+        </a>
     </div>    
       <div class="w-3/4 flex-col flex-wrap">
         <div class="max-xl:hidden xl:flex flex-row flex-wrap text-sm gap-6 mt-4 mb-4">
-          <div>
+          <!-- <div>
             <a href="book_a_test.html">Book a Test</a>
-          </div>
+          </div> -->
           <!-- <div>
             <a href="">Nearest Center</a>
           </div> -->
           <!-- <div>
             <a href="">Download Report</a>
           </div> -->
-          <div>
+          <!-- <div>
             <a href="">Special Programs</a>
-          </div>
+          </div> -->
           <!-- <div>
             <a href="">Promotions & Discounts</a>
           </div> -->
           <!-- <div>
             <a href="">Not Sure About Test</a>
           </div> -->
+          <input
+  type="text"
+
+  placeholder="Search tests..."
+  class="testSearch w-full md:w-1/2 p-2 mb-4 border border-gray-300 rounded-md outline-none"
+/>
+
         </div>
          <div class="right">
         <div class="search-test">
-          <div class="j-menu">
+          <!-- <div class="j-menu">
             <input type="checkbox" id="checkbox">
             <label for="checkbox" class="click-me-icon">
               <i class="fa-solid fa-bars"></i>
@@ -130,11 +167,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="../Contact_us/contact.html">CONTACT</a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
 
-        <div class="w-full h-12 flex flex-row max-md:flex-wrap gap-7">
+        <div cla  s="w-full h-12 flex flex-row max-md:flex-wrap gap-7">
 
           <!-- <div
             class="flex flex-row items-center justify-center gap-2 w-[15%] h-10 rounded-lg bg-[#F2F4F6] hover: cursor-pointer">
@@ -157,9 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- <img src="../Assets/add-cart.png" alt="" class="relative h-7 hover: cursor-pointer">
             <p class="ml-1 hover: cursor-pointer">Cart</p>
             <span>|</span> -->
-            <img src="../Assets/profile.png" alt="" class="relative h-6 hover: cursor-pointer">
+            <!-- <img src="../Assets/profile.png" alt="" class="relative h-6 hover: cursor-pointer">
             <p class="ml-1 hover: cursor-pointer">Log In</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -495,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function () {
        
         <div class="grid grid-rows-17 gird-cols-3 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-1 gap-y-1 grid-flow-row">
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn1" data-tooltip-text="COMPLETE BLOOD COUNT; CBC">COMPLETE BLOOD COUNT; CBC</h3>
             
@@ -540,7 +577,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn2" data-tooltip-text="HbA1c; GLYCOSYLATED HEMOGLOBIN">HbA1c; GLYCOSYLATED HEMOGLOBIN</h3>
             
@@ -584,7 +621,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn3" data-tooltip-text="URINE EXAMINATION, ROUTINE; URINE, R/E">URINE EXAMINATION, ROUTINE; URINE, R/E</h3>
             
@@ -628,7 +665,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn4" data-tooltip-text="GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS">GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS</h3>
             
@@ -671,7 +708,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn5" data-tooltip-text="THYROID PROFILE, TOTAL">THYROID PROFILE, TOTAL</h3>
             
@@ -714,7 +751,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn6" data-tooltip-text="WELLNESS REPORT">WELLNESS REPORT</h3>
             
@@ -757,7 +794,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn7" data-tooltip-text="GLUCOSE, FASTING (F)">GLUCOSE, FASTING (F)</h3>
             
@@ -800,7 +837,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn8" data-tooltip-text="SWASTH SUPER -2">SWASTH SUPER -2</h3>
             
@@ -846,7 +883,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn9" data-tooltip-text="SWASTH SUPER -4">SWASTH SUPER -4</h3>
             
@@ -892,7 +929,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn1" data-tooltip-text="COMPLETE BLOOD COUNT; CBC">COMPLETE BLOOD COUNT; CBC</h3>
             
@@ -935,7 +972,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn2" data-tooltip-text="HbA1c; GLYCOSYLATED HEMOGLOBIN">HbA1c; GLYCOSYLATED HEMOGLOBIN</h3>
             
@@ -978,7 +1015,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn3" data-tooltip-text="URINE EXAMINATION, ROUTINE; URINE, R/E">URINE EXAMINATION, ROUTINE; URINE, R/E</h3>
             
@@ -1021,7 +1058,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn4" data-tooltip-text="GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS">GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS</h3>
             
@@ -1064,7 +1101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn5" data-tooltip-text="THYROID PROFILE, TOTAL">THYROID PROFILE, TOTAL</h3>
             
@@ -1107,7 +1144,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn6" data-tooltip-text="WELLNESS REPORT">WELLNESS REPORT</h3>
             
@@ -1150,7 +1187,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn7" data-tooltip-text="GLUCOSE, FASTING (F)">GLUCOSE, FASTING (F)</h3>
             
@@ -1193,7 +1230,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn8" data-tooltip-text="SWASTH SUPER -2">SWASTH SUPER -2</h3>
             
@@ -1239,7 +1276,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn9" data-tooltip-text="SWASTH SUPER -4">SWASTH SUPER -4</h3>
             
@@ -1284,7 +1321,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn1" data-tooltip-text="COMPLETE BLOOD COUNT; CBC">COMPLETE BLOOD COUNT; CBC</h3>
             
@@ -1327,7 +1364,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn2" data-tooltip-text="HbA1c; GLYCOSYLATED HEMOGLOBIN">HbA1c; GLYCOSYLATED HEMOGLOBIN</h3>
             
@@ -1370,398 +1407,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn3" data-tooltip-text="URINE EXAMINATION, ROUTINE; URINE, R/E">URINE EXAMINATION, ROUTINE; URINE, R/E</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip3" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">16 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 80
-                </p> -->
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn4" data-tooltip-text="GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS">GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip4" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">2 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 150
-                </p> -->
-                <br>
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn5" data-tooltip-text="THYROID PROFILE, TOTAL">THYROID PROFILE, TOTAL</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip5" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">3 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 550
-                </p> -->
-                <br>
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn6" data-tooltip-text="WELLNESS REPORT">WELLNESS REPORT</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip6" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">1 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 250
-                </p> -->
-                <br>
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn7" data-tooltip-text="GLUCOSE, FASTING (F)">GLUCOSE, FASTING (F)</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip7" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">1 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 60
-                </p> -->
-                <br>
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn8" data-tooltip-text="SWASTH SUPER -2">SWASTH SUPER -2</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip8" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">55 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans mr-2">₹</span>
-                  <p class="font-semibold text-slate-700 line-through mr-4">3370</p>
-                  <span class="text-xs text-#3E3E45 font-sans mr-2 text-green-600">₹</span>
-                  <p class="font-semibold text-green-600">1250</p>
-                </p> -->
-                <br>
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn9" data-tooltip-text="SWASTH SUPER -4">SWASTH SUPER -4</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip9" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">57 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans mr-2">₹</span>
-                  <p class="font-semibold text-slate-700 line-through mr-4">6120</p>
-                  <span class="text-xs text-#3E3E45 font-sans mr-2 text-green-600">₹</span>
-                  <p class="font-semibold text-green-600">2050</p>
-                </p> -->
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn1" data-tooltip-text="COMPLETE BLOOD COUNT; CBC">COMPLETE BLOOD COUNT; CBC</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip1" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">20 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="text-xs text-#3E3E45 font-sans">&#8377;</span> 200
-                </p> -->
-                <br>
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
-              <div class="relative">
-                <h3 class="text-sm font-semibold mb-2" id="cbcBtn2" data-tooltip-text="HbA1c; GLYCOSYLATED HEMOGLOBIN">HbA1c; GLYCOSYLATED HEMOGLOBIN</h3>
-            
-                <!-- Tooltip for this card -->
-                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip2" role="tooltip"></div>
-              </div>
-              <p class="text-sm cursor-pointer">2 Parameter(s) Covered</p>
-              <div class="flex items-center">
-                <!-- <p class="font-semibold text-slate-700">
-                  <span class="font-sans text-xs text-#3E3E45">₹</span> 350
-                </p> -->
-                <br>
-              </div>
-              <div class="flex flex-row flex-wrap gap-4 mt-2">
-                <div class="flex items-center flex-wrap ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
-                </div>
-                <div class="flex items-center ml-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
-                  </svg>
-                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between mt-2">
-                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
-                <div class="flex items-center ml-2">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
-                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                    </svg>
-                  </span>
-                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
-                </div>
-                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
-              </div>
-            </div>
-            <!-- End of card code block -->
-            <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn3" data-tooltip-text="URINE EXAMINATION, ROUTINE; URINE, R/E">URINE EXAMINATION, ROUTINE; URINE, R/E</h3>
             
@@ -1803,7 +1449,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn4" data-tooltip-text="GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS">GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS</h3>
             
@@ -1846,7 +1492,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn5" data-tooltip-text="THYROID PROFILE, TOTAL">THYROID PROFILE, TOTAL</h3>
             
@@ -1889,7 +1535,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn6" data-tooltip-text="WELLNESS REPORT">WELLNESS REPORT</h3>
             
@@ -1932,7 +1578,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn7" data-tooltip-text="GLUCOSE, FASTING (F)">GLUCOSE, FASTING (F)</h3>
             
@@ -1975,7 +1621,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn8" data-tooltip-text="SWASTH SUPER -2">SWASTH SUPER -2</h3>
             
@@ -2021,7 +1667,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn9" data-tooltip-text="SWASTH SUPER -4">SWASTH SUPER -4</h3>
             
@@ -2066,7 +1712,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn1" data-tooltip-text="COMPLETE BLOOD COUNT; CBC">COMPLETE BLOOD COUNT; CBC</h3>
             
@@ -2109,7 +1755,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn2" data-tooltip-text="HbA1c; GLYCOSYLATED HEMOGLOBIN">HbA1c; GLYCOSYLATED HEMOGLOBIN</h3>
             
@@ -2152,7 +1798,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn3" data-tooltip-text="URINE EXAMINATION, ROUTINE; URINE, R/E">URINE EXAMINATION, ROUTINE; URINE, R/E</h3>
             
@@ -2194,7 +1840,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn4" data-tooltip-text="GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS">GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS</h3>
             
@@ -2237,7 +1883,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn5" data-tooltip-text="THYROID PROFILE, TOTAL">THYROID PROFILE, TOTAL</h3>
             
@@ -2280,7 +1926,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn6" data-tooltip-text="WELLNESS REPORT">WELLNESS REPORT</h3>
             
@@ -2323,7 +1969,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn7" data-tooltip-text="GLUCOSE, FASTING (F)">GLUCOSE, FASTING (F)</h3>
             
@@ -2366,7 +2012,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn8" data-tooltip-text="SWASTH SUPER -2">SWASTH SUPER -2</h3>
             
@@ -2412,7 +2058,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn9" data-tooltip-text="SWASTH SUPER -4">SWASTH SUPER -4</h3>
             
@@ -2457,7 +2103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn1" data-tooltip-text="COMPLETE BLOOD COUNT; CBC">COMPLETE BLOOD COUNT; CBC</h3>
             
@@ -2500,7 +2146,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn2" data-tooltip-text="HbA1c; GLYCOSYLATED HEMOGLOBIN">HbA1c; GLYCOSYLATED HEMOGLOBIN</h3>
             
@@ -2543,7 +2189,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn3" data-tooltip-text="URINE EXAMINATION, ROUTINE; URINE, R/E">URINE EXAMINATION, ROUTINE; URINE, R/E</h3>
             
@@ -2585,7 +2231,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn4" data-tooltip-text="GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS">GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS</h3>
             
@@ -2628,7 +2274,398 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <!-- End of card code block -->
             <!-- Repeat this card code block for each card -->
-            <div class="bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105">
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn5" data-tooltip-text="THYROID PROFILE, TOTAL">THYROID PROFILE, TOTAL</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip5" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">3 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 550
+                </p> -->
+                <br>
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn6" data-tooltip-text="WELLNESS REPORT">WELLNESS REPORT</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip6" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">1 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 250
+                </p> -->
+                <br>
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn7" data-tooltip-text="GLUCOSE, FASTING (F)">GLUCOSE, FASTING (F)</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip7" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">1 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 60
+                </p> -->
+                <br>
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn8" data-tooltip-text="SWASTH SUPER -2">SWASTH SUPER -2</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip8" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">55 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans mr-2">₹</span>
+                  <p class="font-semibold text-slate-700 line-through mr-4">3370</p>
+                  <span class="text-xs text-#3E3E45 font-sans mr-2 text-green-600">₹</span>
+                  <p class="font-semibold text-green-600">1250</p>
+                </p> -->
+                <br>
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn9" data-tooltip-text="SWASTH SUPER -4">SWASTH SUPER -4</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip9" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">57 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans mr-2">₹</span>
+                  <p class="font-semibold text-slate-700 line-through mr-4">6120</p>
+                  <span class="text-xs text-#3E3E45 font-sans mr-2 text-green-600">₹</span>
+                  <p class="font-semibold text-green-600">2050</p>
+                </p> -->
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn1" data-tooltip-text="COMPLETE BLOOD COUNT; CBC">COMPLETE BLOOD COUNT; CBC</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip1" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">20 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans">&#8377;</span> 200
+                </p> -->
+                <br>
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn2" data-tooltip-text="HbA1c; GLYCOSYLATED HEMOGLOBIN">HbA1c; GLYCOSYLATED HEMOGLOBIN</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip2" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">2 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="font-sans text-xs text-#3E3E45">₹</span> 350
+                </p> -->
+                <br>
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn3" data-tooltip-text="URINE EXAMINATION, ROUTINE; URINE, R/E">URINE EXAMINATION, ROUTINE; URINE, R/E</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip3" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">16 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 80
+                </p> -->
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
+              <div class="relative">
+                <h3 class="text-sm font-semibold mb-2" id="cbcBtn4" data-tooltip-text="GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS">GLUCOSE, FASTING (F) AND POST MEAL (PP), 2 HOURS</h3>
+            
+                <!-- Tooltip for this card -->
+                <div class="w-fit h-fit tooltip bg-black text-white text-sm px-2 py-1 absolute rounded shadow hidden text-center" id="cbcTooltip4" role="tooltip"></div>
+              </div>
+              <p class="text-sm cursor-pointer">2 Parameter(s) Covered</p>
+              <div class="flex items-center">
+                <!-- <p class="font-semibold text-slate-700">
+                  <span class="text-xs text-#3E3E45 font-sans">₹</span> 150
+                </p> -->
+                <br>
+              </div>
+              <div class="flex flex-row flex-wrap gap-4 mt-2">
+                <div class="flex items-center flex-wrap ">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Home Collection</p>
+                </div>
+                <div class="flex items-center ml-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 fill-current text-green-500">
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                  </svg>
+                  <p class="font-semibold text-green-500 text-xs ml-2">Lab Visit</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <!-- <button class="bg-blue-900 w-32 focus:outline-none focus:ring focus:ring-blue-300 text-white py-2 px-4 rounded-lg flex items-center justify-center">Add to cart</button> -->
+                <div class="flex items-center ml-2">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                      <path fill="#d8d8d8" d="M384 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16h320zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                  </span>
+                  <!-- <p class="text-base font-semibold text-gray-700 ml-2">Compare</p> -->
+                </div>
+                <!-- <button class="text-blue-800 py-2 px-4 font-semibold">Know More</button> -->
+              </div>
+            </div>
+            <!-- End of card code block -->
+            <!-- Repeat this card code block for each card -->
+            <div class="test-card bg-white shadow-lg rounded-md p-4 m-2 overflow-hidden transition-transform transform hover:scale-105" onclick="goTo()">
               <div class="relative">
                 <h3 class="text-sm font-semibold mb-2" id="cbcBtn5" data-tooltip-text="THYROID PROFILE, TOTAL">THYROID PROFILE, TOTAL</h3>
             
@@ -2750,208 +2787,16 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="h-full bg-[#F5F5F5] rounded-2xl">
           <h6 class="ml-5 py-2 font-bold text-xl">Lab Test At Home</h6>
           <ul class="labtest box-border mb-4 p-4">
-            <li><a href="https://www.maxpathlab.com/book-a-test/agartala">Agartala</a><span>|</span>
+            <li><a href="https://www.maxpathlab.com/book-a-test/agartala">Agra</a><span>|</span>
             </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/agra">Agra</a><span>|</span>
+            <li><a href="https://www.maxpathlab.com/book-a-test/agra">Tundla</a><span>|</span>
             </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/ahmedabad">Ahmedabad</a><span>|</span>
+            <li><a href="https://www.maxpathlab.com/book-a-test/ahmedabad">Mathura</a><span>|</span>
             </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/aligarh">Aligarh</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/allahabad">Allahabad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/alwar">Alwar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/ambala">Ambala</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/amravati">Amravati</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/amritsar">Amritsar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/aurangabad">Aurangabad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/azamgarh">Azamgarh</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bahadurgarh">Bahadurgarh</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bareilly">Bareilly</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/begusarai">Begusarai</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bengaluru">Bengaluru</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bhatinda">Bhatinda</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bhilai">Bhilai</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bhopal">Bhopal</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bhubaneshwar">Bhubaneshwar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bijnor">Bijnor</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/bilaspur">Bilaspur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/chandigarh">Chandigarh</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/chennai">Chennai</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/coimbatore">Coimbatore</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/daltonganj">Daltonganj</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/darbhanga">Darbhanga</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/dehradun">Dehradun</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/delhi">Delhi</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/deoria">Deoria</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/dhanbad">Dhanbad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/durgapur">Durgapur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/faridabad">Faridabad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/faizabad">Faizabad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/gaya">Gaya</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/ghaziabad">Ghaziabad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/goa%20velha">Goa
-                Velha</a><span>|</span></li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/gorakhpur">Gorakhpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/greater%20noida">Greater
-                Noida</a><span>|</span></li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/gurgaon">Gurgaon</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/guwahati">Guwahati</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/gwalior">Gwalior</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/haldwani">Haldwani</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/haridwar">Haridwar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/hisar">Hisar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/hoshiarpur">Hoshiarpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/howrah">Howrah</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/hyderabad">Hyderabad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/indore">Indore</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/jabalpur">Jabalpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/jaipur">Jaipur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/jalandhar">Jalandhar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/jammu">Jammu</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/jamshedpur">Jamshedpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/jodhpur">Jodhpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/kangra">Kangra</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/kanpur">Kanpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/karnal">Karnal</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/khanna">Khanna</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/kochi">Kochi</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/kolkata">Kolkata</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/kota">Kota</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/kurukshetra">Kurukshetra</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/lucknow">Lucknow</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/ludhiana">Ludhiana</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/mangalore">Mangalore</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/mathura">Mathura</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/meerut">Meerut</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/modinagar">Modinagar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/moga">Moga</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/mohali">Mohali</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/moradabad">Moradabad</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/mumbai">Mumbai</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/muzaffarpur">Muzaffarpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/mysore">Mysore</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/nagpur">Nagpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/nashik">Nashik</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/noida">Noida</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/panchkula">Panchkula</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/panipat">Panipat</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/pathankot">Pathankot</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/patiala">Patiala</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/patna">Patna</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/pune">Pune</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/purnia">Purnia</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/raipur">Raipur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/ranchi">Ranchi</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/rewari">Rewari</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/rohtak">Rohtak</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/sagar">Sagar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/saharanpur">Saharanpur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/shillong">Shillong</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/shimla">Shimla</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/silchar">Silchar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/siliguri">Siliguri</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/sirsa">Sirsa</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/sonipat">Sonipat</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/srinagar">Srinagar</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/udaipur">Udaipur</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/vadodara">Vadodara</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/varanasi">Varanasi</a><span>|</span>
-            </li>
-            <li><a href="https://www.maxpathlab.com/book-a-test/yamuna%20nagar">Yamuna
-                Nagar</a></li>
+            
+            
+            
+            
           </ul>
         </div>
       </div>
@@ -3181,10 +3026,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         </div>
-
+      
       </div>
     </footer>
   </section>
+  <script>
+  function goTo() {
+    window.location.href = "../../Contact_us/genral-en.html";
+  }
+</script>
+
 
   <script src="https://kit.fontawesome.com/7c5861f7d9.js" crossorigin="anonymous"></script>
 

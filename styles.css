@@ -2157,9 +2157,29 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
      }
 
      html {
-         font-size: 10px;
+         font-size: 14px;
      }
-
+     .popular-test-container p{
+        font-size: 18px;
+     }
+     .experties-content p{
+        font-size: 18px;
+     }
+     .experties-content h2{
+        font-size: 28px;
+     }
+     .lab-test-content h1{
+        font-size: 28px;
+     }
+     .lab-test-content a{
+        font-size: 18px;
+     }
+     .popular-test-content-at-footer h6{
+        font-size: 28px;
+     }
+     .popular-test-content-at-footer a{
+        font-size: 18px;
+     }
      .centerr,
      .program-container,
      .popular-test-container {
