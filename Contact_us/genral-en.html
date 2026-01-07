@@ -16,7 +16,41 @@
   </head>
 
   <body class="bg-gray-100">
-    <header>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobileToggle");
+  const menu = document.getElementById("mobileMenu");
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", function () {
+    menu.classList.toggle("show");
+  });
+});
+</script>
+
+    <!-- MOBILE NAVBAR -->
+<header class="mobile-nav">
+  <div class="mobile-bar">
+    <a href="../index.html">
+      <img src="../logo-h.jpeg" alt="Max Path Lab" class="mobile-logo">
+    </a>
+
+    <button id="mobileToggle" aria-label="Open Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../Book_a_test/dist/book_a_test.html">Book a Test</a>
+    <a href="../About_us/about.html">About Us</a>
+    <a href="../Contact_us/contact.html">Contact Us</a>
+    <a href="http://103.134.113.137/franchises/">Login</a>
+  </nav>
+</header>
+
+    <header class="desktop-nav">
       <nav class="navbar-top">
         <div class="nav-content">
           <div class="navList">
@@ -140,8 +174,8 @@
               </div>
             </div> -->
 
-            <div class="search-test">
-              <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            <!-- <div class="search-test">
+              <div class="menu"><i class="fa-solid fa-bars"></i></div> -->
               <!-- <form action="">
                 <input type="text" placeholder="Search Test & Packages" />
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -167,7 +201,7 @@
  
 
      <!-- here it starts -->
-     <main class="">
+     <main class="page-content">
     
       <section class="contact-section">
   <div class="container">
@@ -618,10 +652,10 @@
     </main>
 
     <!-- lets chat  -->
-    <div class="lets-chat">
+    <!-- <div class="lets-chat">
       <i class="fa-solid fa-message"></i>
       <p>Let's Chat!</p>
-    </div>
+    </div> -->
 
 
      </main>

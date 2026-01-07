@@ -14,8 +14,42 @@
 </head>
 
 <body class="font-sans overflow-x-hidden w-full">
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobileToggle");
+  const menu = document.getElementById("mobileMenu");
 
-  <header class="max-w-full w-full max-xl:h-[5rem] sticky top-0 bg-white z-50 max-xl:flex max-xl:items-center max-xl:justify-start shadow-xl" id="top">
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", function () {
+    menu.classList.toggle("show");
+  });
+});
+</script>
+<!-- MOBILE NAVBAR -->
+<header class="mobile-nav">
+  <div class="mobile-bar">
+    <a href="../../index.html">
+      <img src="../../logo-h.jpeg" alt="Max Path Lab" class="mobile-logo">
+    </a>
+
+    <button id="mobileToggle" aria-label="Open Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="../../index.html">Home</a>
+    <a href="./book_a_test.html">Book a Test</a>
+    <a href="../../About_us/about.html">About Us</a>
+    <a href="../../Contact_us/contact.html">Contact Us</a>
+    <a href="http://103.134.113.137/franchises/">Login</a>
+  </nav>
+</header>
+
+
+
+  <header class="desktop-nav max-w-full w-full max-xl:h-[5rem] sticky top-0 bg-white z-50 max-xl:flex max-xl:items-center max-xl:justify-start shadow-xl" id="top">
     <nav class="sam w-screen h-13 max-xl:hidden">
       <div class="max-w-7xl flex flex-col py-4 px-9">
         <div class="text-sm text-white  text-slate-700 flex flex-row flex-wrap items-stretch w-full ml-72 space-x-7">

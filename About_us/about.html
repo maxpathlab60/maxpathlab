@@ -25,7 +25,43 @@
   </head>
 
   <body class="bg-gray-100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="200">
-    <header class="" id="nav">
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobileToggle");
+  const menu = document.getElementById("mobileMenu");
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", function () {
+    menu.classList.toggle("show");
+  });
+});
+</script>
+
+
+    <!-- MOBILE NAVBAR -->
+<header class="mobile-nav">
+  <div class="mobile-bar">
+    <a href="../../index.html">
+      <img src="../../logo-h.jpeg" alt="Max Path Lab" class="mobile-logo">
+    </a>
+
+    <button id="mobileToggle" aria-label="Open Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="../../index.html">Home</a>
+    <a href="./book_a_test.html">Book a Test</a>
+    <a href="../../About_us/about.html">About Us</a>
+    <a href="../../Contact_us/contact.html">Contact Us</a>
+    <a href="http://103.134.113.137/franchises/">Login</a>
+  </nav>
+</header>
+
+
+    <header class="desktop-nav" id="nav">
       <nav class="navbar-top">
         <div class="nav-content">
           <div class="navList">
@@ -1211,13 +1247,13 @@
       </section>
       <!-- side element  -->
       <div class="side-element">
-        <!-- <a href="">
+        <a href="">
           <img
             src="https://uat-cdn.drlallab.com/2022-12/side-img3.png"
             alt=""
           />
-          <p>Nearest Center</p>
-        </a> -->
+          <p>Log In</p>
+        </a>
         <a href="../Book_a_test/dist/book_a_test.html"
           ><img
             src="https://uat-cdn.drlallab.com/2022-12/side-img2.png"
@@ -1245,14 +1281,14 @@
     <!-- lets chat  -->
     <!--\\\\ Chat Box Section ////-->
 
-  <label class="lets-chat" data-aos="fade-up"
+  <!-- <label class="lets-chat" data-aos="fade-up"
   data-aos-anchor-placement="top-bottom" for="lets-chat">
     <i class="fa-solid fa-message"></i>
     <p>Let's Chat!</p>
   </label>
-  <input type="checkbox" name="lets-chat" id="lets-chat" class="hide-input" hidden />
+  <input type="checkbox" name="lets-chat" id="lets-chat" class="hide-input" hidden /> -->
 
-  <div class="chat-form">
+  <!-- <div class="chat-form">
     <div class="helpline">
       <img src="https://haptikappimg.haptikapi.com/uploads/95a6b73ddfee72e3c9014f95f064db84.png?w=256&h=144" alt="" />
       <div class="helpline-details">
@@ -1282,7 +1318,7 @@
       <input type="text" placeholder="Type here..." />
       <p class="haptik">Powered by <span>haptik</span></p>
     </div>
-  </div>
+  </div> -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script
       src="https://kit.fontawesome.com/7c5861f7d9.js"
@@ -1292,5 +1328,9 @@
     <script>
       AOS.init();
     </script>
+    
   </body>
 </html>
+
+
+

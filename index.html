@@ -17,6 +17,18 @@
 </head>
 
 <body>
+       <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("mobileToggle");
+  const menu = document.getElementById("mobileMenu");
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", function () {
+    menu.classList.toggle("show");
+  });
+});
+</script>
 
     <!-- MOBILE NAVBAR -->
     <header class="mobile-nav">
@@ -738,38 +750,38 @@
                     <div class="promotion-carausel blog-carausel">
                         <div class="promotion-content blog-content">
                             <div class="blog-item">
-                                <img src="https://www.maxpathlab.com/blog/wp-content/uploads/2023/03/what-is-hba1c.png"
+                                <img src="./images/1.png"
                                     alt="">
                                 <span>Mar 30, 2023</span>
                                 <p>What is HbA1c and What does it test?</p>
                             </div>
                             <div class="blog-item">
-                                <img src="https://www.maxpathlab.com/blog/wp-content/uploads/2023/03/liver-disease.png"
+                                <img src="./images/2.png"
                                     alt="">
                                 <span>Mar 30, 2023</span>
                                 <p> Liver Disease: Types, Causes, Symptoms and More</p>
                             </div>
                             <div class="blog-item">
-                                <img src="https://www.maxpathlab.com/blog/wp-content/uploads/2023/03/hiv-aids-diagnosis-treatment.png"
+                                <img src="./images/3.png"
                                     alt="">
                                 <span> Mar 22, 2023</span>
                                 <p> HIV/AIDS – Symptoms, Diagnosis and Treatment</p>
                             </div>
                             <div class="blog-item">
-                                <img src="https://www.maxpathlab.com/blog/wp-content/uploads/2023/03/rheumatoid-arthritis.png"
+                                <img src="./images/4.png"
                                     alt="">
                                 <span>Mar 14, 2023</span>
                                 <p>All about Rheumatoid Arthritis – Causes, Symptoms, Diagnosis, Treatment & Recommended
                                     Diet</p>
                             </div>
                             <div class="blog-item">
-                                <img src="https://www.maxpathlab.com/blog/wp-content/uploads/2023/02/skin-allergies.png"
+                                <img src="./images/5.png"
                                     alt="">
                                 <span>Feb 23, 2023</span>
                                 <p> Skin Allergies – Types, Symptoms, Causes, and Diagnosis</p>
                             </div>
                             <div class="blog-item">
-                                <img src="https://www.maxpathlab.com/blog/wp-content/uploads/2023/02/quadruple-screening-test.png"
+                                <img src="./images/6.png"
                                     alt="">
                                 <span>Feb 22, 2023</span>
                                 <p>All about Quadruple Screening (Marker) Test</p>
@@ -1310,21 +1322,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     </script>
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("mobileToggle");
-  const menu = document.getElementById("mobileMenu");
-
-  if (!toggle || !menu) {
-    console.error("Mobile menu elements not found");
-    return;
-  }
-
-  toggle.addEventListener("click", function () {
-    menu.classList.toggle("show");
-  });
-});
-</script>
+  
 
 </body>
 
