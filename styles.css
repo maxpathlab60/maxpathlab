@@ -2148,6 +2148,18 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
 
  }
 
+ .blue-card-items {
+    flex: 1;
+}
+
+.blue-card-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-left: 1px solid var(--color-yellow);
+}
  @media screen and (max-width:700px) {
      .footer-top {
          visibility: hidden;
@@ -2155,7 +2167,9 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
          height: 80px;
          position: absolute;
      }
-
+     .blue-card-items {
+        height: auto;
+    }
      html {
          font-size: 14px;
      }
@@ -2597,3 +2611,14 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
   animation: special 40s linear infinite;
 }
 .services-content     { animation: special 45s linear infinite; }
+
+
+@media screen and (max-width: 700px) {
+    .blue-card-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .blue-card-items {
+        height: 180px;
+    }
+}
