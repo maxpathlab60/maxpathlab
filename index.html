@@ -265,8 +265,9 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
 
                         </div>
-                        <i class="fa-solid fa-angle-left"></i>
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i class="fa-solid fa-angle-left" id="sp-left"></i>
+                        <i class="fa-solid fa-chevron-right" id="sp-right"></i>
+
                     </div>
                 </div>
             </div>
@@ -437,8 +438,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             </div>
                         </div>
-                        <i class="fa-solid fa-angle-left"></i>
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i class="fa-solid fa-angle-left" id="pt-left"></i>
+                        <i class="fa-solid fa-chevron-right" id="pt-right"></i>
+
                     </div>
                     <div class="view-all"><a href="./Book_a_test/dist/book_a_test.html">View All</a></div>
                 </div>
@@ -462,7 +464,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div> -->
                     </div>
                     <div class="program-carausel">
-                        <div class="test-packages-content">
+                        <div class="program-carausel-content">
+                                                   <div class="test-packages-content">
                             <div class="program-items">
                                 <img src="https://uat-cdn.drlallab.com/2021-07/special-img5.png" alt="">
                                 <p>Allergy</p>
@@ -502,6 +505,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
 
                         </div>
+                        </div>
+ 
                         <i class="fa-solid fa-angle-left"></i>
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
@@ -1281,6 +1286,52 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </footer>
     </section>
+
+   <script>
+function controlledCarousel(wrapper, track, leftBtn, rightBtn) {
+  let index = 0;
+  const itemWidth = track.children[0].offsetWidth;
+  const maxIndex = track.children.length - Math.floor(wrapper.offsetWidth / itemWidth);
+
+  function stopAnimation() {
+    track.classList.add("stop-animation");
+  }
+
+  function update() {
+    track.style.transform = `translateX(${-index * itemWidth}px)`;
+  }
+
+  rightBtn.addEventListener("click", () => {
+    stopAnimation();
+    if (index < maxIndex) index++;
+    update();
+  });
+
+  leftBtn.addEventListener("click", () => {
+    stopAnimation();
+    if (index > 0) index--;
+    update();
+  });
+}
+
+/* Special Programs */
+controlledCarousel(
+  document.querySelector(".program-carausel"),
+  document.querySelector(".program-carausel-content"),
+  document.getElementById("sp-left"),
+  document.getElementById("sp-right")
+);
+
+/* Popular Tests */
+controlledCarousel(
+  document.querySelector(".popula-carausel"),
+  document.querySelector(".popular-test-content"),
+  document.getElementById("pt-left"),
+  document.getElementById("pt-right")
+);
+</script>
+
+
 
     <script src="https://kit.fontawesome.com/7c5861f7d9.js" crossorigin="anonymous">
     document.querySelectorAll(".program-carausel").forEach(carousel => {

@@ -2531,3 +2531,40 @@ input[type=checkbox].hide-input:not(:checked) + .chat-form{
 
 
 
+.stop-animation {
+  animation: none !important;
+}
+
+.program-carausel {
+  position: relative;
+}
+
+.program-carausel .sp-left,
+.program-carausel .sp-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  background: #0047af;
+  color: #fff;
+  padding: 10px 13px;
+  border-radius: 50%;
+}
+
+.program-carausel .sp-left {
+  left: -20px;
+}
+
+.program-carausel .sp-right {
+  right: -20px;
+}
+
+.program-carausel-content {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+}
+
+.stop-animation {
+  animation: none !important;
+}
