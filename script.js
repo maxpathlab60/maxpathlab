@@ -101,4 +101,102 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Carousel Functionality
+    const setupCarousel = (carouselId) => {
+        const carousel = document.querySelector(carouselId);
+        if (!carousel) return;
+
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const indicators = Array.from(carousel.querySelectorAll('.carousel-indicator'));
+        
+        if (slides.length === 0) return;
+
+        // Get slide width including gap
+        const getSlideWidth = () => {
+            const slideStyle = window.getComputedStyle(slides[0]);
+            const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+            return slides[0].getBoundingClientRect().width + gap;
+        };
+
+        let slideWidth = getSlideWidth();
+
+        // Arrange slides next to each other (not needed with flex gap, but needed for calculation)
+        // With flex gap, we just translate by index * (width + gap)
+        
+        const moveToSlide = (currentSlide, targetSlide, index) => {
+            track.style.transform = 'translateX(-' + (index * slideWidth) + 'px)';
+            
+            // Update indicators
+            const currentDot = carousel.querySelector('.current-slide');
+            if (currentDot) currentDot.classList.remove('current-slide');
+            if (indicators[index]) indicators[index].classList.add('current-slide');
+        };
+
+        // Click on indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                const currentSlide = track.querySelector('.current-slide'); // We aren't using this class on slides currently
+                const targetSlide = slides[index];
+                moveToSlide(currentSlide, targetSlide, index);
+                
+                // Reset autoplay timer on interaction
+                resetAutoplay();
+            });
+        });
+
+        // Autoplay
+        let currentIndex = 0;
+        let autoplayInterval;
+
+        const startAutoplay = () => {
+            autoplayInterval = setInterval(() => {
+                currentIndex++;
+                if (currentIndex >= slides.length) { // Or logic to loop back cleanly
+                    // Simple loop back
+                    currentIndex = 0;
+                }
+                
+                // Check if we can scroll further. 
+                // For a continuous look, we might want to check if the last slide is fully visible.
+                // But for now, simple index based.
+                // Wait, if visible area shows multiple slides, we shouldn't scroll one by one necessarily, or we should limit max index.
+                // Let's keep it simple: scroll one by one, loop back to 0.
+                
+                // Adjust for visible slides?
+                // If container width < total width, we scroll.
+                // Let's just scroll to index. 
+                // If we reach the end where no more content to scroll, we might want to go back to 0.
+                
+                // Improve loop logic:
+                // Calculate max index based on container width
+                const containerWidth = carousel.querySelector('.carousel-track-container').getBoundingClientRect().width;
+                const totalWidth = slides.length * slideWidth;
+                const maxTranslate = totalWidth - containerWidth;
+                
+                // Actually, let's just loop through all indicators.
+                if (currentIndex >= indicators.length) currentIndex = 0;
+
+                moveToSlide(null, slides[currentIndex], currentIndex);
+            }, 3000); // 3 seconds
+        };
+
+        const resetAutoplay = () => {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        };
+
+        // Recalculate on resize
+        window.addEventListener('resize', () => {
+            slideWidth = getSlideWidth();
+            // Reset position
+            moveToSlide(null, slides[currentIndex], currentIndex);
+        });
+
+        startAutoplay();
+    };
+
+    setupCarousel('#packages-carousel');
+    setupCarousel('#testimonials-carousel');
 });
