@@ -40,6 +40,7 @@ header {
     margin: 0 auto;
     position: relative;
     z-index: 1100;
+    height: 100px;
 }
 
 .logo {
@@ -49,11 +50,18 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
+    position: relative;
+    width: 150px; /* Reserve space for the logo */
+    height: 40px; /* Keep navbar height minimal */
 }
 
 .logo img {
-    height: 70px;
+    height: 100px; /* Increased size */
     margin-right: 10px;
+    position: absolute;
+    top: -30px; /* Position to hang over */
+    left: 0;
+    z-index: 100000000;
 }
 
 .nav-links {
@@ -95,7 +103,7 @@ header {
     text-align: center;
     color: var(--white);
     padding: 0 1rem;
-    margin-top: 102px;
+    margin-top: 60px;
 }
 
 .hero-content h1 {
@@ -269,7 +277,7 @@ header {
     justify-content: center;
     text-align: center;
     color: var(--white);
-    margin-top: 102px;
+    margin-top: 60px;
 }
 
 .page-header h1 {
@@ -406,9 +414,9 @@ footer {
 
     .nav-links {
         position: absolute;
-        top: 102px;
+        top: 60px;
         right: 0;
-        height: calc(100vh - 102px);
+        height: calc(100vh - 60px);
         background: var(--white);
         flex-direction: column;
         width: 100%;
