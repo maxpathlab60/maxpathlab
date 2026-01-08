@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+
 
     <header>
         <div class="top-bar">
@@ -104,6 +106,8 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" placeholder="How can we help you?"></textarea>
                     </div>
+                    <p id="statusMsg" style="margin-top:10px;font-size:14px;"></p>
+
                     <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Send Message</button>
                 </form>
             </div>
@@ -163,6 +167,8 @@
             <p>&copy; 2026 Max Path Lab. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="contact.js"></script>
 
     <script src="script.js"></script>
 </body>

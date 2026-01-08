@@ -49,15 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple Form Submission (Demo)
-    const contactForm = document.querySelector('#contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you shortly.');
-            contactForm.reset();
-        });
-    }
+    // // Simple Form Submission (Demo)
+    // const contactForm = document.querySelector('#contact-form');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', (e) => {
+    //         e.preventDefault();
+    //         alert('Thank you for your message! We will contact you shortly.');
+    //         contactForm.reset();
+    //     });
+    // }
 
     // Animation on Scroll (Simple Fade-in)
     const observerOptions = {
