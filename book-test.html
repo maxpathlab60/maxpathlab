@@ -11,11 +11,16 @@
             background-color: transparent; /* Changed from var(--white) */
             padding: 1rem;
             /* box-shadow moved to search-box */
-            margin-top: 100px; /* Increased from 80px */
+            margin-top: 160px; /* Increased from 80px */
             position: sticky;
-            top: 90px; /* Increased from 70px */
+            top: 150px; /* Increased from 70px */
             z-index: 900;
             pointer-events: none; /* Allow clicks to pass through empty space */
+        }
+
+        /* Override page-header margin since it's not the first element here */
+        .page-header {
+            margin-top: 0 !important;
         }
 
         .search-box {
@@ -146,6 +151,10 @@
 <body>
 
     <header>
+        <div class="top-bar">
+            <a href="#" class="top-bar-link blue">Download Report</a>
+            <a href="upload-prescription.html" class="top-bar-link blue">Upload Prescription</a>
+        </div>
         <nav class="navbar">
             <a href="index.html" class="logo"><img src="logo-h.jpeg" alt="Max Path Lab"></a>
             <div class="menu-toggle">

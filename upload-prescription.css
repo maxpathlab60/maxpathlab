@@ -1,0 +1,255 @@
+/* upload-prescription.css */
+
+/* Import existing variables and base styles if needed, or redefine for this specific page if completely separate. 
+   Assuming it shares the main layout (navbar/footer), we should include style.css in the HTML, 
+   and this file will contain specific overrides and new sections. 
+*/
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #00a8cc;
+    --accent-red: #0056b3;
+    --white: #ffffff;
+    --light-bg: #f4f4f4;
+}
+
+/* Hero Section with Slanted Background */
+.upload-hero {
+    position: relative;
+    height: 400px;
+    background-color: var(--light-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 160px;
+}
+
+.upload-hero-content {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    position: relative;
+}
+
+.hero-left {
+    flex: 1;
+    background-color: #0066ff; /* Bright Blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5% 0 10%;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    z-index: 2;
+    width: 60%;
+}
+
+.hero-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-left p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.hero-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: url('download-image.jpeg') no-repeat center center/cover; /* Use existing image or placeholder */
+    z-index: 1;
+}
+
+/* Process Steps Section */
+.upload-process {
+    padding: 4rem 5%;
+    background-color: #e6f7fa; /* Light cyan background */
+    text-align: center;
+}
+
+.process-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-card-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.process-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.process-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.process-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.process-info p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Upload Form Section */
+.upload-form-section {
+    padding: 4rem 5%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container-dashed {
+    border: 2px dashed #ccc;
+    padding: 3rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.form-container-dashed h2 {
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: var(--secondary-color);
+}
+
+.file-upload-wrapper {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.file-upload-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.file-input-group {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.file-type-hint {
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.upload-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #0056b3; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-submit-btn:hover {
+    background-color: #e62e5c;
+}
+
+/* Top Bar Styles (to be included in style.css, but referencing here for context) */
+.top-bar {
+    display: flex;
+    /* justify-content: flex-end; */
+    background-color: #fff;
+}
+
+.top-bar-link {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.top-bar-link.blue {
+    background-color: #0066ff;
+}
+
+.top-bar-link.red {
+    background-color: #ff3366;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-left {
+        width: 100%;
+        clip-path: none;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .hero-right {
+        display: none;
+    }
+    
+    .process-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
