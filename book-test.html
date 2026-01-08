@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Test - Max Path Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .search-container {
+            background-color: transparent; /* Changed from var(--white) */
+            padding: 1rem;
+            /* box-shadow moved to search-box */
+            margin-top: 100px; /* Increased from 80px */
+            position: sticky;
+            top: 90px; /* Increased from 70px */
+            z-index: 900;
+            pointer-events: none; /* Allow clicks to pass through empty space */
+        }
+
+        .search-box {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            background: var(--white); /* Added background here */
+            border-radius: 50px; /* More rounded */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Stronger shadow */
+            pointer-events: auto; /* Re-enable clicks */
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3.5rem; /* Increased left padding */
+            border: none; /* Removed border */
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1.5rem; /* Adjusted icon position */
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color); /* Changed color */
+            font-size: 1.2rem;
+        }
+
+        .packages-header {
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .packages-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .packages-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .test-list {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .test-card {
+            background: var(--white);
+            border-radius: 12px; /* Softened radius */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border-left: 5px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .test-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left-color: var(--primary-color);
+        }
+
+        .test-card h3 {
+            color: #000;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .test-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .test-features {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        .test-features span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .book-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .book-btn:hover {
+            background-color: #004494;
+        }
+
+        /* Price styling - commented out as requested but structure is here */
+        .price-tag {
+            /* display: none; */ 
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="logo-h.jpeg" alt="Max Path Lab"></a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <!-- <li><a href="index.html#gallery">Gallery</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://lab.maxpathlab.com/franchises/">Log In</a></li>
+                <li><a href="book-test.html" class="active btn">Book Test</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Bar Section (Image 1 Style) -->
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search tests...">
+        </div>
+    </div>
+
+    <!-- Header Section (Image 2 Style) -->
+    <div class="page-header" style="background: linear-gradient(rgba(0,86,179,0.8), rgba(0,168,204,0.8)), url('download-image (1).jpeg') no-repeat center center/cover;">
+        <h1>Wellness Health Packages</h1>
+        <p>Excellence and Quality in the field of Diagnostics</p>
+    </div>
+
+    <!-- Test Cards List (Image 1 Style Content + Image 2 Context) -->
+    <div class="test-list">
+        
+        <!-- Card 1 -->
+        <div class="test-card" >
+            <h3>Complete Blood Count; CBC</h3>
+            <p class="test-meta">20 Parameter(s) Covered</p>
+            <div class="test-features">
+                <span><i class="fas fa-check-circle"></i> Home Collection</span>
+                <span><i class="fas fa-check-circle"></i> Lab Visit</span>
+            </div>
+            <a href="contact.html#book" class="book-btn" onclick="event.stopPropagation()">Book Now</a>
+            <!-- <div class="price-tag">Rs. 500</div> -->
+        </div>
+
+        <!-- Card 2 -->
+        <div class="test-card" >
+            <h3>HbA1c; Glycosylated Hemoglobin</h3>
+            <p class="test-meta">2 Parameter(s) Covered</p>
+            <div class="test-features">
+                <span><i class="fas fa-check-circle"></i> Home Collection</span>
+                <span><i class="fas fa-check-circle"></i> Lab Visit</span>
+            </div>
+            <a href="contact.html#book" class="book-btn" onclick="event.stopPropagation()">Book Now</a>
+            <!-- <div class="price-tag">Rs. 400</div> -->
+        </div>
+
+        <!-- Card 3 -->
+        <div class="test-card" >
+            <h3>Urine Examination, Routine; Urine, R/E</h3>
+            <p class="test-meta">16 Parameter(s) Covered</p>
+            <div class="test-features">
+                <span><i class="fas fa-check-circle"></i> Home Collection</span>
+                <span><i class="fas fa-check-circle"></i> Lab Visit</span>
+            </div>
+            <a href="contact.html#book" class="book-btn" onclick="event.stopPropagation()">Book Now</a>
+            <!-- <div class="price-tag">Rs. 200</div> -->
+        </div>
+
+        <!-- Card 4 -->
+        <div class="test-card" >
+            <h3>Glucose, Fasting (F) and Post Meal (PP)</h3>
+            <p class="test-meta">2 Parameter(s) Covered</p>
+            <div class="test-features">
+                <span><i class="fas fa-check-circle"></i> Home Collection</span>
+                <span><i class="fas fa-check-circle"></i> Lab Visit</span>
+            </div>
+            <a href="contact.html#book" class="book-btn" onclick="event.stopPropagation()">Book Now</a>
+            <!-- <div class="price-tag">Rs. 150</div> -->
+        </div>
+
+        <!-- Card 5 -->
+        <div class="test-card" >
+            <h3>Thyroid Profile, Total</h3>
+            <p class="test-meta">3 Parameter(s) Covered</p>
+            <div class="test-features">
+                <span><i class="fas fa-check-circle"></i> Home Collection</span>
+                <span><i class="fas fa-check-circle"></i> Lab Visit</span>
+            </div>
+            <a href="contact.html#book" class="book-btn" onclick="event.stopPropagation()">Book Now</a>
+            <!-- <div class="price-tag">Rs. 600</div> -->
+        </div>
+
+        <!-- Card 6: Package Example (Image 2 Inspired) -->
+        <div class="test-card" >
+            <h3>Senior Citizen Profile (Male/Female)</h3>
+            <p class="test-meta">30+ Tests Included (CBC, Lipid, KFT, LFT, etc.)</p>
+            <div class="test-features">
+                <span><i class="fas fa-check-circle"></i> Home Collection</span>
+                <span><i class="fas fa-check-circle"></i> Report in 24 Hours</span>
+            </div>
+            <a href="contact.html#book" class="book-btn" onclick="event.stopPropagation()">Book Now</a>
+            <!-- <div class="price-tag">Rs. 1750</div> -->
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Max Path Lab</h4>
+                <p>Dedicated to excellence in diagnostics.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 9634688282</li>
+                    <li><i class="fas fa-envelope"></i> maxpathlab@gmail.com</li>
+                    <li><i class="fas fa-globe"></i> www.maxpathlab.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> t-2, Krishna Arcade, D-252, Bypass Road, Water Works, Ghatwasan, Kamla Nagar, Agra, Uttar Pradesh 282005</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Max Path Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

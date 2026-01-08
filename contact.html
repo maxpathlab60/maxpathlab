@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Max Path Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="logo-h.jpeg" alt="Max Path Lab"></a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                
+                <li><a href="about.html">About Us</a></li>
+                <!-- <li><a href="index.html#gallery">Gallery</a></li> -->
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="https://lab.maxpathlab.com/franchises/">Log In</a></li>
+                <li><a href="book-test.html" class="btn">Book Test</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header" style="background: linear-gradient(rgba(0,86,179,0.8), rgba(0,168,204,0.8)), url('download-image (3).jpg') no-repeat center center/cover;">
+        <div class="header-content">
+            <h1>Contact Us</h1>
+            <p>Get in Touch for Appointments and Inquiries</p>
+        </div>
+    </div>
+
+    <section class="services" id="book">
+        <div class="contact-container">
+            <div class="contact-info-box">
+                <h2 style="margin-bottom: 2rem; color: var(--primary-color);">Get In Touch</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>t-2, Krishna Arcade, D-252, Bypass Road, Water Works, Ghatwasan, Kamla Nagar, Agra, Uttar Pradesh 282005</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>9634688282</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>maxpathlab@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>Mon - Sat: 7:00 AM - 9:00 PM</p>
+                        <p>Sun: 8:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2 style="margin-bottom: 2rem; color: var(--primary-color);">Book a Test / Inquiry</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" name="service">
+                            <option value="general">General Inquiry</option>
+                            <option value="blood_test">Blood Test</option>
+                            <option value="mri">MRI / CT Scan</option>
+                            <option value="full_body">Full Body Checkup</option>
+                            <option value="home_collection">Home Collection</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section style="height: 400px; width: 100%; background-color: #eee;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.327222331196!2d78.02618067610149!3d27.20887444729933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397471bf9b52aa93%3A0x731bfd38f0161b55!2smax%20path%20Lab!5e0!3m2!1sen!2sin!4v1767694205742!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Max Path Lab</h4>
+                <p>Dedicated to excellence in diagnostics.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 9634688282</li>
+                    <li><i class="fas fa-envelope"></i> maxpathlab@gmail.com</li>
+                    <li><i class="fas fa-globe"></i> www.maxpathlab.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> t-2, Krishna Arcade, D-252, Bypass Road, Water Works, Ghatwasan, Kamla Nagar, Agra, Uttar Pradesh 282005</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Max Path Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

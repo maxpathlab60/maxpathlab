@@ -1,1258 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="R_6_UcyEFIPp9BeOaTeSqm7t9g5lSHEramUNXK3kTyU" />
-    <title>Max Path Lab</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./fevicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-
+    <title>Max Path Lab - Advanced Diagnostic Services</title>
+    <meta name="description" content="Max Path Lab provides accurate and timely diagnostic services including Blood Tests, MRI, X-Ray and more.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="icon" href="fevicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <script>
-function makeInfinite(trackId, visibleCount = 4) {
-  const track = document.getElementById(trackId);
-  const items = Array.from(track.children);
-  const itemWidth = items[0].offsetWidth;
-  let index = 0;
 
-  // clone items
-  items.forEach(item => {
-    track.appendChild(item.cloneNode(true));
-  });
-
-  setInterval(() => {
-    index++;
-    track.style.transform = `translateX(-${index * itemWidth}px)`;
-
-    if (index >= items.length) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = "translateX(0)";
-      }, 500);
-
-      setTimeout(() => {
-        track.style.transition = "transform 0.5s ease-in-out";
-      }, 550);
-    }
-  }, 2500);
-}
-
-// APPLY TO ALL THREE
-makeInfinite("specialTrack");
-makeInfinite("popularTrack");
-makeInfinite("servicesTrack");
-</script>
-
-
-       <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("mobileToggle");
-  const menu = document.getElementById("mobileMenu");
-
-  if (!toggle || !menu) return;
-
-  toggle.addEventListener("click", function () {
-    menu.classList.toggle("show");
-  });
-});
-</script>
-<script>
-  function goTo() {
-    window.location.href = "./Book_a_test/dist/book_a_test.html";
-  }
-</script>
-
-    <!-- MOBILE NAVBAR -->
-    <header class="mobile-nav">
-    <div class="mobile-bar">
-        <a href="./index.html">
-        <img src="../logo-h.jpeg" alt="Max Path Lab" class="mobile-logo">
-        </a>
-
-        <button id="mobileToggle" aria-label="Open Menu">
-        <i class="fa-solid fa-bars"></i>
-        </button>
-    </div>
-
-    <nav class="mobile-menu" id="mobileMenu">
-        <a href="./index.html">Home</a>
-        <a href="../Book_a_test/dist/book_a_test.html">Book a Test</a>
-        <!-- <a href="#special-program">Special Programs</a> -->
-        <!-- <a href="#promotion">Promotions</a> -->
-        <a href="../About_us/about.html">About Us</a>
-        <a href="../Contact_us/contact.html">Contact Us</a>
-        <a href="https://lab.maxpathlab.com/franchises/">Login</a>
-    </nav>
-    </header>
-
-    <header id="top" class="desktop-nav">
-        <!-- Top-NAVBAR -->
-        <nav class="navbar-top">
-            <div class="nav-content">
-                <div class="navList">
-                    <div class="navList-items patient" ><a href="./index.html"><p style="color: black;">HOME</p>HOME</a></div>
-                    <!-- <div class="navList-items "><a href="Doctors/doctors.html">DOCTORS</a></div> -->
-                    <!-- <div class="navList-items"><a href="Bussiness/business.html">BUSINESS PARTNERSHIP</a></div> -->
-                    <div class="navList-items"><a href="./About_us/about.html">ABOUT US</a></div>
-                    <!-- <div class="navList-items"><a href="Investors/dist/investors.html">INVESTORS</a></div> -->
-                    <div class="navList-items"><a href="./Contact_us/contact.html">CONTACT US</a></div>
-                </div>
-                <!-- <div class="blogHyperLink">
-                    <div class="blog"><a href="#goto-blog">BLOGS</a></div>
-                    <hr class="vertical-line">
-                    <div class="FAQ"><a href="#faqs">FAQS</a></div>
-                </div> -->
-                <div class="user">
-                    <!-- <input type="checkbox" id="welcome-dropdown">
-                    <label for="welcome-dropdown">
-                        <div class="user-content">
-                            <i class="fa-regular fa-user profile"></i>
-                            <span class="welcome-user">Login</span>
-                            
-                        </div>
-                    </label> -->
-                    <!-- Drop Down Menu Container -->
-                    <!-- <div class="drop-down" id="drop-down">
-                        <div class="Account">
-                            <a href="">
-                                <div class="Account-user">
-                                    <div class="acc-head"><span>ACCOUNT</span></div>
-                                    <div class="welcome-guest"><span class="account-image" id="account-image">W</span>
-                                        <span>Welcome Guest ...</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div class="my-order">
-                            <a href="">
-                                <img src="https://uat-cdn.drlallab.com/2022-12/ordericon.png" alt="">
-                                <span>My Order</span>
-                            </a>
-                        </div>
-                        <div class="my-permission">
-                            <a href="">
-                                <img src="https://uat-cdn.drlallab.com/2022-12/subscriptionsicon.png" alt="">
-                                <span>My Permissions</span>
-                            </a>
-                        </div>
-                        <div class="wallet-balance">
-                            <a href="">
-
-                                <img src=" https://uat-cdn.drlallab.com/2022-12/walleticon.png" alt="">
-                                <span>Wallet Balance</span></a>
-                        </div> -->
-                    </div>
-                </div>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="logo-h.jpeg" alt="Max Path Lab"></a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
-        </nav>
-
-        <!-- Bottom-NAVBAR -->
-        <nav class="navbar-bottom">
-            <div class="navbar-bottom-content">
-                <a href="./index.html"> <img src="./logo-h.jpeg" alt="" class="logo-img"></a>
-                <div class="left">
-                    <div class="bottom-navList"><a href="./Book_a_test/dist/book_a_test.html">Book a <br>Test</a></div>
-                    <!-- <div class="bottom-navList"><a href="">Nearest <br>Center</a></div> -->
-                    <div class="bottom-navList"><a href="https://lab.maxpathlab.com/labmatedownload/">Download <br> Report</a></div>
-                    <div class="bottom-navList"><a href="#special-program">Special <br>Programs</a></div>
-                    <div class="bottom-navList"><a href="#promotion">Promotions & <br> Discounts</a></div>
-                </div>
-                <div class="right">
-                    <!-- <div class="location">
-                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="search-location">
-                            <p class="city-name">Bhilai</p>
-                            <input type="text" placeholder="Search Location...">
-                        </div>
-                    </div> -->
-
-                   
-                    <!-- <div class="cart"><img src="https://uat-cdn.drlallab.com/2022-12/cart-plus.png" alt=""></div> -->
-                </div>
-            </div>
-        </nav>
-
-    </header>
-
-    <main>
-
-        <!--Hero Image carausel -->
-        <section class="carausel">
-            <figure>
-                <!-- <img src="./images/download-image.jpeg" alt=""> -->
-                <img src="./images/download-image (1).jpeg" alt="">
-                <img src="./images/download-image (2).jpeg" alt="">
-                <img src="./images/download-image (3).jpg" alt="">
-                <img src="./images/download-image (1).jpeg" alt="">
-                <!-- <img src="./images/download-image.jpeg" alt=""> -->
-            </figure>
-        </section>
-
-        <!-- Hero items below Carausel -->
-        <section class="blue-card">
-            <div class="blue-card-container">
-                <div class="blue-card-items">
-                    <a href="">
-                        <div><img src="https://uat-cdn.drlallab.com/2021-08/Webp.net-resizeimage%20%282%29.png" alt="">
-                        </div>
-                        <h3>Payment Options
-                        </h3>
-                    </a>
-                </div>
-                <div class="blue-card-items">
-                    <a href="./Book_a_test/dist/book_a_test.html">
-                        <div>
-                            <img src="https://uat-cdn.drlallab.com/2021-07/blue-bg-icon2.png" alt="">
-                        </div>
-
-                        <h3>Book a Test</h3>
-                    </a>
-                </div>
-                <div class="blue-card-items">
-                    <a href="https://lab.maxpathlab.com/franchises/">
-                        <div> <img src="https://uat-cdn.drlallab.com/2021-08/Webp.net-resizeimage%20%283%29.png" alt="">
-                        </div>
-                        <h3>Log In
-                        </h3>
-                    </a>
-                </div>
-                <div class="blue-card-items report">
-                    <a href="https://lab.maxpathlab.com/labmatedownload/">
-                        <div><img src="https://uat-cdn.drlallab.com/2021-07/blue-bg-icon4_0.png" alt=""></div>
-                        <h3>Download Report
-                        </h3>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- FIXED SIDE-ELEMENT -->
-        <div class="side-element">
-            <!-- <a href="">
-                <img src="https://uat-cdn.drlallab.com/2022-12/side-img3.png" alt="">
-                <p>Nearest Center</p>
-            </a> -->
-            <a href="./Book_a_test/dist/book_a_test.html"><img src="https://uat-cdn.drlallab.com/2022-12/side-img2.png"
-                    alt="">
-                <p>Book a Test
-
-                </p>
-            </a>
-            <a href="https://lab.maxpathlab.com/franchises/"><img src="https://uat-cdn.drlallab.com/2022-12/footer-upload.png" alt="">
-                <p>Log In</p>
-            </a>
-            <a href=""> <img src="https://uat-cdn.drlallab.com/2022-12/side-img4.png" alt="">
-                <p>Payment Options</p>
-            </a>
-        </div>
-
-        <!-- SPECIAL PROGRAM SECTION  -->
-        <section class="special-program" id="special-program">
-            <div class="centerr">
-                <div class="program-container">
-                    <p>Special Programs</p>
-                    <div class="program-carausel">
-                        <div class="program-carausel-content" id="specialTrack">
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img5.png" alt="">
-                                <p>Allergy</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2022-02/oncopro-1_0.png" alt="">
-                                <p>Oncopro</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img1.png" alt="">
-                                <p>Diabetic Care Program</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img2.png" alt="">
-                                <p>SwasthFit</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img4.png" alt="">
-                                <p>Pregnancy Pakages</p>
-                            </div>
-
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img5.png" alt="">
-                                <p>Allergy</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2022-02/oncopro-1_0.png" alt="">
-                                <p>Oncopro</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img1.png" alt="">
-                                <p>Diabetic Care Program</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img2.png" alt="">
-                                <p>SwasthFit</p>
-                            </div>
-                            <div class="program-items">
-                                <img src="https://uat-cdn.drlallab.com/2021-07/special-img4.png" alt="">
-                                <p>Pregnancy Pakages</p>
-                            </div>
-
-                        </div>
-                        <i class="fa-solid fa-angle-left" id="sp-left"></i>
-                        <i class="fa-solid fa-chevron-right" id="sp-right"></i>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- POPULAR TEST/ PACKAGES SECTION -->
-        <section class=" popular-test" style="margin-bottom: 0;padding-bottom: 0;">
-            <div class="centerr">
-                <div class=" popular-test-container">
-                    <p>Popular Tests / Packages</p>
-                    <div class="program-carausel popula-carausel">
-                        <div class="program-carausel-content popular-test-content" id="popularTrack">
-                            <a href="./Contact_us/genral-en.html"></a>
-                            
-                            <div class="program-items popular-test-item" onclick="goTo()">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 
-                                <p>SUGAR ADVANCE</p>
-                                <hr>
-                                <ul>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/info-icon.png" alt="">
-                                        <span>Minimum 12 hours fasting is mandatory.
-                                        </span>
-                                    </li>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/report-icon.png"
-                                            alt=""><span> Daily
-                                        </span></li>
-                                    <li class="last-list"><img
-                                            src="https://uat-cdn.drlallab.com/2023-02/parameters-covered.png"
-                                            alt=""><span>75 parameter(s) covered</span></li>
-                                </ul>
-                                <!-- <div class="know-more">Know More</div> -->
-                                <!-- <div class="price">
-                                    <p id="rupee-icon"><i class="fa-solid fa-indian-rupee-sign"> 2800</i></p>
-                                    <p>Price</p>
-                                </div> -->
+                <li><a href="about.html">About Us</a></li>
+                <!-- <li><a href="#gallery">Gallery</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://lab.maxpathlab.com/franchises/">Log In</a></li>
+                <li><a href="book-test.html" class="btn">Book Test</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-                            </div>
-                            <div class="program-items popular-test-item" onclick="goTo()">
-                                <p>GLUCOSE, FASTING (F)</p>
-                                <hr>
-                                <ul>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/info-icon.png" alt="">
-                                        <span>Minimum 8 hours fasting is mandatory.
-                                        </span>
-                                    </li>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/report-icon.png"
-                                            alt=""><span>Daily
-                                        </span></li>
-                                    <li class="last-list"><img
-                                            src="https://uat-cdn.drlallab.com/2023-02/parameters-covered.png"
-                                            alt=""><span> 1 parameter(s) covered</span></li>
-                                </ul>
-                                <!-- <div class="know-more">Know More</div> -->
-                                <!-- <div class="price">
-                                    <p id="rupee-icon"><i class="fa-solid fa-indian-rupee-sign"> 60</i></p>
-                                    <p>Price</p>
-                                </div> -->
-
-
-                            </div>
-                            <div class="program-items popular-test-item" onclick="goTo()">
-                                <p>ALLERGY SCREEN</p>
-                                <hr>
-                                <ul>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/info-icon.png" alt="">
-                                        <span>No special preparation required.</span>
-                                    </li>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/report-icon.png"
-                                            alt=""><span>Sample Daily by 11 am; Report Same day</span></li>
-                                    <li class="last-list"><img
-                                            src="https://uat-cdn.drlallab.com/2023-02/parameters-covered.png"
-                                            alt=""><span>2 parameter(s) covered</span></li>
-                                </ul>
-                                <!-- <div class="know-more">Know More</div> -->
-                                <!-- <div class="price">
-                                    <p id="rupee-icon"> <i class="fa-solid fa-indian-rupee-sign"> 1800</i></p>
-                                    <p> Price</p>
-                                </div> -->
-
-
-                            </div>
-                            <div class="program-items popular-test-item"   onclick="goTo()">
-                                <p>SUGAR ADVANCE</p>
-                                <hr>
-                                <ul>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/info-icon.png" alt="">
-                                        <span>Minimum 12 hours fasting is mandatory.
-                                        </span>
-                                    </li>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/report-icon.png"
-                                            alt=""><span> Daily
-                                        </span></li>
-                                    <li class="last-list"><img
-                                            src="https://uat-cdn.drlallab.com/2023-02/parameters-covered.png"
-                                            alt=""><span>75 parameter(s) covered</span></li>
-                                </ul>
-                                <!-- <div class="know-more">Know More</div> -->
-                                <!-- <div class="price">
-                                    <p id="rupee-icon"><i class="fa-solid fa-indian-rupee-sign"> 2800</i></p>
-                                    <p>Price</p>
-                                </div> -->
-
-
-                            </div>
-                            <div class="program-items popular-test-item" onclick="goTo()">
-                                <p>GLUCOSE, FASTING (F)</p>
-                                <hr>
-                                <ul>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/info-icon.png" alt="">
-                                        <span>Minimum 8 hours fasting is mandatory.
-                                        </span>
-                                    </li>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/report-icon.png"
-                                            alt=""><span>Daily
-                                        </span></li>
-                                    <li class="last-list"><img
-                                            src="https://uat-cdn.drlallab.com/2023-02/parameters-covered.png"
-                                            alt=""><span> 1 parameter(s) covered</span></li>
-                                </ul>
-                                <!-- <div class="know-more">Know More</div> -->
-                                <!-- <div class="price">
-                                    <p id="rupee-icon"><i class="fa-solid fa-indian-rupee-sign"> 60</i></p>
-                                    <p>Price</p>
-                                </div> -->
-
-
-                            </div>
-                            <div class="program-items popular-test-item" onclick="goTo()">
-                                <p>GLUCOSE, FASTING (F)</p>
-                                <hr>
-                                <ul>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/info-icon.png" alt="">
-                                        <span>Minimum 8 hours fasting is mandatory.
-                                        </span>
-                                    </li>
-                                    <li> <img src="https://www.maxpathlab.com/assets/images/report-icon.png"
-                                            alt=""><span>Daily
-                                        </span></li>
-                                    <li class="last-list"><img
-                                            src="https://uat-cdn.drlallab.com/2023-02/parameters-covered.png"
-                                            alt=""><span> 1 parameter(s) covered</span></li>
-                                </ul>
-                                <!-- <div class="know-more">Know More</div> -->
-                                <!-- <div class="price">
-                                    <p><i class="fa-solid fa-indian-rupee-sign"> 60</i></p>
-                                    <p>Price</p>
-                                </div> -->
-
-
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-angle-left" id="pt-left"></i>
-                        <i class="fa-solid fa-chevron-right" id="pt-right"></i>
-
-                    </div>
-                    <div class="view-all"><a href="./Book_a_test/dist/book_a_test.html">View All</a></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEARCH TEST AND PACKAGES SECTION-->
-      <!-- SEARCH TEST AND PACKAGES SECTION -->
-<section class="test-packages" style="margin-top: 0;padding-top: 0;">
-  <div class="centerr">
-    <div class="test-packages-container">
-      <p>Services and Package</p>
-
-      <div class="test-package-header">
-        <!-- header content (buttons / search if needed later) -->
-      </div>
-
-      <!-- ✅ REQUIRED WRAPPER -->
-      <div class="program-carausel services-carausel">
-
-        <!-- ✅ MOVING CONTENT -->
-        <div class="program-carausel-content services-content" id="servicesTrack"    >
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-07/special-img5.png" alt="">
-            <p>Allergy</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-07/search-test5.png" alt="">
-            <p>Infertility</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon2.png" alt="">
-            <p>Liver</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-08/testmenu-icon1.png" alt="">
-            <p>Heart</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon3.png" alt="">
-            <p>Lungs</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-08/swasthfit-icon4.png" alt="">
-            <p>Kidney</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-08/blog-popup-img6.png" alt="">
-            <p>CBC</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-08/thyroid.png" alt="">
-            <p>Thyroid</p>
-          </div>
-
-          <div class="program-items">
-            <img src="https://uat-cdn.drlallab.com/2021-08/vitamin%20d.png" alt="">
-            <p>Vitamin D</p>
-          </div>
-
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Precision in Every Test</h1>
+            <p>Your trusted partner for accurate diagnostic pathology services. Advanced technology meeting expert care.</p>
+            <a href="book-test.html" class="btn">Explore Services</a>
         </div>
-
-        <!-- ✅ FIXED ARROWS -->
-        <i class="fa-solid fa-angle-left" id="svc-left"></i>
-        <i class="fa-solid fa-chevron-right" id="svc-right"></i>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-        <!-- Why-LALPATHLABS SECTION -->
-        <section class="Why-LalPathLabs">
-            <div class="centerr">
-                <div class="pathlab-container">
-                    <p>Why Max Path Labs</p>
-                    <div class="pathlab-content">
-                        <div class="pathlab-items">
-                            <img src="https://uat-cdn.drlallab.com/2021-08/q3.png" alt="">
-                            <div class="pathlab-text">
-                                <h1>50mn</h1>
-                                <p>Samples Collected</p>
-                            </div>
-                        </div>
-                        <div class="pathlab-items">
-                            <img src="https://uat-cdn.drlallab.com/2021-08/q1.png" alt="">
-                            <div class="pathlab-text">
-                                <h1>10+</h1>
-                                <p>Labs</p>
-                            </div>
-                        </div>
-                        <div class="pathlab-items">
-                            <img src="https://uat-cdn.drlallab.com/2021-08/q4.png" alt="">
-                            <div class="pathlab-text">
-                                <h1>10+</h1>
-                                <p>Patient Service Centres</p>
-                            </div>
-                        </div>
-                        <div class="pathlab-items">
-                            <img src="https://uat-cdn.drlallab.com/2021-08/Total%20no.%20of%20Customers.png" alt="">
-                            <div class="pathlab-text">
-                                <h1>1000+</h1>
-                                <p>Total No. of Customers</p>
-                            </div>
-                        </div>
-                        <div class="pathlab-items">
-                            <img src="https://uat-cdn.drlallab.com/2021-08/Total%20no%20of%20Test.png" alt="">
-                            <div class="pathlab-text">
-                                <h1>50+</h1>
-                                <p>Total No. of Tests and Panels</p>
-                            </div>
-                        </div>
-                        <div class="pathlab-items">
-                            <img src="https://uat-cdn.drlallab.com/2021-08/why-dr-lal-6%20%281%29.png" alt="">
-                            <div class="pathlab-text">
-                                <h1>1000+</h1>
-                                <p>Pick-up Points</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="view-all"><a href="./About_us/about.html">Explore</a></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROMOTIONS AND DISCOUNT SECTION -->
-        <!-- <section class="promotion" id="promotion">
-            <div class="centerr">
-                <div class="promotion-container">
-                    <p>Promotions & Discounts</p>
-                    <div class="promotion-carausel">
-                        <div class="promotion-content">
-                            <div class="promotion-item">
-                                <img src="./images/download-image (4).jpeg" alt="">
-                                <p>Offer – Upto 30% OFF on single package & upto 40% OFF on double packages</p>
-                            </div>
-                            <div class="promotion-item">
-                                <img src="./images/download-image (5).jpeg" alt="">
-                                <p>Swasth Referral– Book any Swasthfit package & earn a 20% discount on next package for
-                                    friends & family.</p>
-                            </div>
-                            <div class="promotion-item">
-                                <img src="./images/download-image (6).jpeg" alt="">
-                                <p>Family Offer on Swasthfit Healthcare Packages</p>
-                            </div>
-                            <div class="promotion-item">
-                                <img src="./images/download-image (4).jpeg" alt="">
-                                <p>Offer – Upto 30% OFF on single package & upto 40% OFF on double packages</p>
-                            </div>
-                            <div class="promotion-item">
-                                <img src="./images/download-image (5).jpeg" alt="">
-                                <p>Swasth Referral– Book any Swasthfit package & earn a 20% discount on next package for
-                                    friends & family.</p>
-                            </div>
-                            <div class="promotion-item">
-                                <img src="./images/download-image (6).jpeg" alt="">
-                                <p>Family Offer on Swasthfit Healthcare Packages</p>
-                            </div>
-                        </div>
-                        <div class="view-all"><a href="">View All</a></div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- EXPLORE MORE SECTION -->
-        <!-- <section class="explore-more">
-            <div class="centerr">
-                <div class="explore-more-container">
-                    <p>Explore More</p>
-                    <div class="explore-carausel">
-                        <div class="explore-content">
-                            <div class="explore-item">
-                                <img src="./images/Swasthfit.webp" alt="">
-                            </div>
-                            <div class="explore-item">
-                                <img src="./images/Family-offer.webp" alt="">
-                            </div>
-                            <div class="explore-item">
-                                <img src="./images/stomach.webp" alt="">
-                            </div>
-                            <div class="explore-item">
-                                <img src="./images/lpl-covid-19-images_0.webp" alt="">
-                            </div>
-                            <div class="explore-item">
-                                <img src="./images/Swasthfit.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="view-all"><a href="">View All</a></div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- COVID PACKAGES SECTION -->
-        <!-- <section class="covid-package">
-            <div class="centerr">
-                <div class="covid-package-container">
-                    <div class="covid-card">
-                        <div class="card-container">
-                            <h1>Corporate Covid Package</h1>
-                            <div class="covid-items">
-                                <img src="https://uat-cdn.drlallab.com/2022-03/Thumbnail-Image--504x225-px.jpg" alt="">
-                                <a href="">Corporate Covid Package</a>
-                            </div>
-                        </div>
-                        <div>
-                            <h1>Corporate Tie-Ups</h1>
-                            <div class="covid-items">
-                                <img src="https://uat-cdn.drlallab.com/2022-03/Thumbnail-Image--503X225.jpg" alt="">
-                                <a href="">Corporate Tie-Ups</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- QUALITY SECTION -->
-        <div class="centerr">
-            <section class="quality-container" id="quality">
-                <h3>Quality</h3>
-                <div class="quality-items-container">
-                    <div class="quality-item">
-                    <img src="./Doctors/Assets/Quality/q7.png" alt="">
-                        <div class="quality-points">
-                            <span>50+</span>
-                            <p>Instruments used for real time QC monitoring</p>
-                        </div>
-                    </div>
-                    <div class="quality-item">
-                    <img src="./Doctors/Assets/Quality/q8.png" alt="">
-                        <div class="quality-points">
-                            <span>40+</span>
-                            <p>Quality Checks & Processes on Every Sample</p>
-                        </div>
-                    </div>
-                    <div class="quality-item">
-                    <img src="./Doctors/Assets/Quality/q9.png" alt="">
-                        <div class="quality-points">
-                            <span>15+</span>
-                            <p>Quality indicator monitored on daily basis</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="view-all">
-                    <a href="./About_us/about.html">Know More</a>
-                </div>
-            </section>
-        </div>
-
-        <!-- Accreditation & Certification -->
-        <!-- <div class="centerr">
-            <section class="achievements-container" id="achievements">
-
-                <div class="accreditation-container">
-                    <h3>Accreditation (National Reference Laboratory at Rohini)</h3>
-                    <div class="accreditation-items">
-                    <img src="./Doctors/Assets/Accreditation and Certifications/Accreditation/LPLPTPsymbol.png"
-                            alt="">
-                    <img src="./Doctors/Assets/Accreditation and Certifications/Accreditation/accreditation1[1].png"
-                            alt="">
-                    <img src="./Doctors/Assets/Accreditation and Certifications/Accreditation/accreditation2[1].png"
-                            alt="">
-                    </div>
-                </div>
-                <div class="certification-container">
-                    <h3>Certifications</h3>
-                    <div class="certification-items">
-                        <div class="certification-details">
-                        <img src="./Doctors/Assets/Accreditation and Certifications/Certifications/accre_iso_new.png"
-                                alt="">
-                            <p class="certification-title">National Reference Laboratory at Rohini, Kolkata
-                                Reference Laboratory at Kolkata</p>
-                        </div>
-                        <div class="certification-details certificate-2">
-                        <img src="./Doctors/Assets/Accreditation and Certifications/Certifications/accre_bsi.svg"
-                                alt="">
-                            <p>National Reference Laboratory at Rohini</p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </div> -->
-
-        <!-- DOWNLOAD APP SECTION -->
-        <!-- <section class="download-app-card">
-            <div class="centerr">
-                <div class="app-card-container">
-                    <div class="app-card">
-                        <div class="app-card-text">
-                            <h2>Download Patient App:</h2>
-                            <div class="playstore">
-                                <img src="https://uat-cdn.drlallab.com/images/google-play.png" alt=""><img
-                                    src="https://uat-cdn.drlallab.com/images/app-store.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- BLOG and ARTICLE SECTION  -->
-        <!-- <section class="blog-and-article" id="goto-blog">
-            <div class="centerr">
-                <div class="promotion-container blog-container">
-                    <p>Featured Blog and Articles</p>
-                    <div class="promotion-carausel blog-carausel">
-                        <div class="promotion-content blog-content">
-                            <div class="blog-item">
-                                <img src="./images/1.png"
-                                    alt="">
-                                <span>Mar 30, 2023</span>
-                                <p>What is HbA1c and What does it test?</p>
-                            </div>
-                            <div class="blog-item">
-                                <img src="./images/2.png"
-                                    alt="">
-                                <span>Mar 30, 2023</span>
-                                <p> Liver Disease: Types, Causes, Symptoms and More</p>
-                            </div>
-                            <div class="blog-item">
-                                <img src="./images/3.png"
-                                    alt="">
-                                <span> Mar 22, 2023</span>
-                                <p> HIV/AIDS – Symptoms, Diagnosis and Treatment</p>
-                            </div>
-                            <div class="blog-item">
-                                <img src="./images/4.png"
-                                    alt="">
-                                <span>Mar 14, 2023</span>
-                                <p>All about Rheumatoid Arthritis – Causes, Symptoms, Diagnosis, Treatment & Recommended
-                                    Diet</p>
-                            </div>
-                            <div class="blog-item">
-                                <img src="./images/5.png"
-                                    alt="">
-                                <span>Feb 23, 2023</span>
-                                <p> Skin Allergies – Types, Symptoms, Causes, and Diagnosis</p>
-                            </div>
-                            <div class="blog-item">
-                                <img src="./images/6.png"
-                                    alt="">
-                                <span>Feb 22, 2023</span>
-                                <p>All about Quadruple Screening (Marker) Test</p>
-                            </div>
-                        </div>
-                        <div class="view-all"><a href="">View All</a></div>
-                        <i class="fa-solid fa-angle-left left-arrow"></i>
-                        <i class="fa-solid fa-chevron-right right-arrow"></i>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Experties -->
-        <section class="experties">
-            <div class="centerr">
-                <div class="experties-container">
-                    <div class="experties-content">
-                        <h1>Max Path Lab Agra – Your Trusted Diagnostic Partner</h1>
-
-                        <p>
-                        Max Path Lab Agra is committed to delivering accurate, reliable, and timely diagnostic services to the people of Agra and nearby regions. With a strong focus on quality, ethics, and patient care, we ensure that every test result supports better medical decisions and healthier lives.
-                        </p>
-
-                        <h2>Our Expertise</h2>
-
-                        <p>
-                        Backed by years of experience in pathology and diagnostics, Max Path Lab Agra combines medical expertise with advanced technology. Our qualified pathologists, skilled technicians, and trained support staff follow strict quality protocols to ensure precision and consistency in every report.
-                        </p>
-
-                        <h2>Comprehensive Diagnostic Services</h2>
-
-                        <p>
-                        We offer a wide range of diagnostic tests including routine blood investigations, preventive health checkups, specialized profiles, and disease-specific panels. From basic pathology tests to advanced diagnostics, our well-equipped laboratory is designed to meet diverse healthcare needs under one roof.
-                        </p>
-
-                        <h2>Accuracy, Quality & Timely Reporting</h2>
-
-                        <p>
-                        At Max Path Lab Agra, quality is our top priority. We use modern analyzers, standardized processes, and multiple quality checks to deliver highly accurate results. Our efficient systems ensure fast turnaround times without compromising reliability.
-                        </p>
-
-                        <h2>Convenience & Patient-Centric Care</h2>
-
-                        <p>
-                        We believe quality healthcare should be easily accessible. With conveniently located collection centers, home sample collection services, and digital report access, Max Path Lab Agra makes diagnostic testing simple, affordable, and hassle-free for patients across the city.
-                        </p>
-
-                    </div>
-                <div class="view-all">
-                    <a href="./About_us/about.html">Know More</a>
-                </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Frequently Asked Question -->
-        <!-- <div class="centerr" id="faqs">
-            <section class="faq-container">
-                <h3>Frequently Asked Questions</h3>
-                <ul class="faq-buttons-container">
-                    <li><button class="faq-button labs">Labs and Centers</button></li>
-                    <li><button class="faq-button reports">Reports</button></li>
-                    <li><button class="faq-button booking">Test Booking</button></li>
-                    <li>
-                        <button class="faq-button wellness">Wellness Packages</button>
-                    </li>
-                    <li>
-                        <button class="faq-button wellness">Patient Wallet</button>
-                    </li>
-                </ul>
-
-                <div class="faq-question">
-                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
-                    <p class="question">
-                        Q.How many labs and centres does LPL have at present?
-                    </p>
-                </div>
-                <div class="faq-question">
-                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
-                    <p class="question">
-                        Q.How can I find out information regarding a particular lab/center?
-                    </p>
-                </div>
-                <div class="view-all">
-                    <a href="">View All</a>
-                </div>
-            </section>
-        </div> -->
-
-        <!-- Lab Test At Home -->
-        <div class="centerr">
-            <section class="lab-testAtHome">
-                <div class="lab-test-container">
-                    <div class="lab-test-content">
-                        <h1>Lab Test At Home</h1>
-                        <div class="location-list">
-                            <div><a href="#">Agra</a></div>
-                            <div>|</div>
-                            <div><a href="#">Tundla</a></div>
-                            <div>|</div>
-                            <div><a href="#">Mathura</a></div>
-                            <div>|</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Popular Test Above Footer -->
-        <div class="centerr">
-            <section class=" popular-test-at-footer">
-                <div class=" popular-test-container-at-footer">
-                    <div class=" popular-test-content-at-footer">
-                        <h6>Popular Tests</h6>
-                        <div class="popular-test-list-at-footer">
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Pregnancy Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Full Body Checkups</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Covid 19 Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Heart Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Kidney Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Liver Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">CBC Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Cholesterol Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">HbA1c Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Hepatitis B Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Kidney Function Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Liver Function Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Sugar Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Thyroid Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Typhoid Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Uric Acid Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Vitamin B12 Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Vitamin D Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Allergy Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Arthritis Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Cancer Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Bone And Joint</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Dengue Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Diabetes Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Rheumatoid Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Tuberculosis Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Infertility Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Diabetes Care</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Anemia Test</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">GastroIntestinal</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Autoimmune Disorders</a></div>
-                            <div>|</div>
-                            <div><a href="./Book_a_test/dist/book_a_test.html">Fever Test</a></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div class="back-to-top">
-            <a href="#top"> <img src="https://uat-cdn.drlallab.com/images/down-link-top.png" alt=""></a>
-        </div>
-
-        <!-- Lets chat container -->
-
-        <!-- <label class="lets-chat" for="lets-chat">
-            <i class="fa-solid fa-message"></i>
-            <p>Let's Chat!</p>
-        </label>
-        <input type="checkbox" name="lets-chat" id="lets-chat" class="hide-input" hidden />
-        <div class="chat-form">
-            <div class="helpline">
-                <img src="https://haptikappimg.haptikapi.com/uploads/95a6b73ddfee72e3c9014f95f064db84.png?w=256&h=144"
-                    alt="" />
-                <div class="helpline-details">
-                    <span class="LPL">LPL</span>
-                    <p class="chat-helpline">24/7 Chat Helpline</p>
-                </div>
-            </div>
-            <div class="main-content">
-                <p class="privacy">
-                    Your privacy matters to us! Learn how we protect your data
-                    <a href="">here</a>
-                </p>
-                <div class="message">
-                    <p class="time">a few seconds ago</p>
-                    <p class="welcome-text">
-                        👋 Hello! Welcome to <strong>Max Path Lab</strong>, where we
-                        focus on providing quality diagnostic services 🏥<br /><br />
-
-                        Please select any of the below topics 👇
-                    </p>
-                </div>
-            </div>
-            <div class="text-box">
-                <div class="menu">
-                    <span>Menu</span> <i class="fa-solid fa-angle-up"></i>
-                </div>
-                <input type="text" placeholder="Type here..." />
-                <p class="haptik">Powered by <span>haptik</span></p>
-            </div>
-        </div> -->
-
-    </main>
-
-    <section class="footer-section">
-        <!-- <footer class="footer-top">
-            <div class="footer-links">
-                <div class="link_col">
-                    <h2>patients</h2>
-                    <div class="links">
-                        <a href="">book a test</a>
-                        <a href="">nearest center</a>
-                        <a href="">download report</a>
-                        <a href="">download app</a>
-                        <a href="">promotion & discount</a>
-                        <a href="">special programs</a>
-
-                    </div>
-                </div>
-                <div class="link_col">
-                    <h2>doctors</h2>
-                    <div class="links">
-                        <a href="">Test menu</a>
-                        <a href="">our labs</a>
-                        <a href="">events</a>
-                        <a href="">quality</a>
-                        <a href="">resource center</a>
-                        <a href="">our departments</a>
-
-                    </div>
-                </div>
-                <div class="link_col">
-                    <h2>Bussiness partners</h2>
-                    <div class="links">
-                        <a href="">partner with us</a>
-                        <a href="">become a vendor</a>
-                        <a href="">corporate tie up</a>
-                        <a href="">international partneship</a>
-                        <a href="">corporate covid testing</a>
-
-
-                    </div>
-                </div>
-                <div class="link_col">
-                    <h2>About us</h2>
-                    <div class="links">
-                        <a href="">our journey</a>
-                        <a href="">vision mission & values</a>
-                        <a href="">our team</a>
-                        <a href="">our network</a>
-                        <a href="">logistics strength</a>
-                        <a href="">CSR</a>
-                        <a href="">career</a>
-
-                    </div>
-                </div>
-                <div class="link_col">
-                    <h2>INVESTORS</h2>
-                    <div class="links">
-                        <a href="">financials</a>
-                        <a href="">investors information</a>
-                        <a href="">corpotate governance</a>
-
-
-                    </div>
-                </div>
-            </div>
-        </footer> -->
-        <footer class="footer-bottom">
-            <div class="copyright">
-                <div class="footer-info">
-                    <h4>2026 © maxpathlab.com. All rights reserved.</h4>
-                    <div>
-                        <a href="">blogs |</a>
-                        <a href=""> CSR |</a>
-                        <a href="">terms of use |</a>
-                        <a href="">privacy policy |</a>
-                        <a href="">cookie policy |</a>
-                        <a href="">site map </a>
-                    </div>
-                    <p>Only Pathology reports available online. For X-Ray, Ultrasound, ECG, TMT, Echo, PFT,
-                        Uroflowmetry reports, please visit the concerned center where test has been conducted.</p>
-                </div>
-                <div class="follow_us">
-                    <span>follow us on:</span>
-                    <div class="social_icons">
-                        <i class="fa-brands fa-facebook-f footer_icons"></i>
-                        <i class="fa-brands fa-youtube footer_icons"></i>
-                        <i class="fa-brands fa-linkedin-in footer_icons"></i>
-                        <i class="fa-brands fa-twitter footer_icons"></i>
-                        <i class="fa-brands fa-instagram footer_icons"></i>
-                    </div>
-
-
-                </div>
-
-            </div>
-        </footer>
     </section>
 
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
+    <!-- Services Summary -->
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-microscope service-icon"></i>
+                <h3>Clinical Pathology</h3>
+                <p>Comprehensive analysis of body fluids for accurate diagnosis of diseases.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-dna service-icon"></i>
+                <h3>Molecular Testing</h3>
+                <p>Advanced DNA and RNA testing for genetic conditions and infectious diseases.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-heartbeat service-icon"></i>
+                <h3>Biochemistry</h3>
+                <p>Vital metabolic profiles including LFT, KFT, Lipid Profile and more.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-x-ray service-icon"></i>
+                <h3>Imaging Services</h3>
+                <p>High-resolution digital X-rays and imaging services for clear insights.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="book-test.html" class="btn">View All Services</a>
+        </div>
+    </section>
 
-  function controlledCarousel(wrapper, track, leftBtn, rightBtn) {
-    let index = 0;
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="section-header">
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">Our Gallery</h2>
+            <p class="section-subtitle">Explore our advanced imaging and diagnostic center in Agra.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=Lab+Equipment" alt="Lab Equipment">
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=Microscope" alt="Microscope">
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=Staff+at+Work" alt="Staff">
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=Patient+Care" alt="Patient Care">
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=Waiting+Area" alt="Waiting Area">
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=MRI+Scanner" alt="MRI Scanner">
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=Blood+Test" alt="Blood Test">
+            </div>
+            <div class="gallery-item">
+                <img src="https://placehold.co/400x400?text=Consultation" alt="Consultation">
+            </div>
+        </div>
+    </section>
 
-    const item = track.querySelector(".program-items");
-    if (!item) return;
+    <!-- About Summary -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://placehold.co/600x400?text=Advanced+Lab" alt="Laboratory Equipment">
+            </div>
+            <div class="about-content">
+                <h2>Why Choose Max Path Lab?</h2>
+                <p>At Max Path Lab, we are committed to providing the highest quality diagnostic services. Our state-of-the-art laboratory is equipped with the latest technology.</p>
+                <br>
+                <ul style="list-style: none;">
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> NABL Accredited Labs</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> 24/7 Service Availability</li>
+                </ul>
+                <br>
+                <a href="about.html" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
 
-    const itemWidth = item.offsetWidth;
-    const maxIndex = track.children.length - Math.floor(wrapper.offsetWidth / itemWidth);
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Max Path Lab</h4>
+                <p>Dedicated to excellence in diagnostics.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 9634688282</li>
+                    <li><i class="fas fa-envelope"></i> maxpathlab@gmail.com</li>
+                    <li><i class="fas fa-globe"></i> www.maxpathlab.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> t-2, Krishna Arcade, D-252, Bypass Road, Water Works, Ghatwasan, Kamla Nagar, Agra, Uttar Pradesh 282005</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Max Path Lab. All rights reserved.</p>
+        </div>
+    </footer>
 
-    function stopAnimation() {
-      track.classList.add("stop-animation");
-    }
-
-    function update() {
-      track.style.transform = `translateX(${-index * itemWidth}px)`;
-    }
-
-    rightBtn.addEventListener("click", () => {
-      stopAnimation();
-      if (index < maxIndex) index++;
-      update();
-    });
-
-    leftBtn.addEventListener("click", () => {
-      stopAnimation();
-      if (index > 0) index--;
-      update();
-    });
-  }
-
-  // Special Programs
-  controlledCarousel(
-    document.querySelector(".program-carausel"),
-    document.querySelector(".program-carausel-content"),
-    document.getElementById("sp-left"),
-    document.getElementById("sp-right")
-  );
-
-  // Popular Tests
-  controlledCarousel(
-    document.querySelector(".popula-carausel"),
-    document.querySelector(".popular-test-content"),
-    document.getElementById("pt-left"),
-    document.getElementById("pt-right")
-  );
-
-  // Services & Packages ✅
-  controlledCarousel(
-    document.querySelector(".services-carausel"),
-    document.querySelector(".services-content"),
-    document.getElementById("svc-left"),
-    document.getElementById("svc-right")
-  );
-
-});
-</script>
-
-
-
-    <script src="https://kit.fontawesome.com/7c5861f7d9.js" crossorigin="anonymous">
-    document.querySelectorAll(".program-carausel").forEach(carousel => {
-  const track = carousel.querySelector(".program-carausel-content, .popular-test-content, .test-packages-content");
-  if (!track) return;
-
-  const left = carousel.querySelector(".fa-angle-left");
-  const right = carousel.querySelector(".fa-chevron-right");
-
-  let position = 0;
-  const itemWidth = track.children[0].offsetWidth + 20;
-  const maxScroll = track.scrollWidth - carousel.offsetWidth;
-
-  right?.addEventListener("click", () => {
-    position = Math.min(position + itemWidth, maxScroll);
-    track.style.transform = `translateX(-${position}px)`;
-  });
-
-  left?.addEventListener("click", () => {
-    position = Math.max(position - itemWidth, 0);
-    track.style.transform = `translateX(-${position}px)`;
-  });
-});    
-
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("mobileToggle");
-  const menu = document.getElementById("mobileMenu");
-
-  if (!toggle || !menu) {
-    console.error("Mobile nav elements not found");
-    return;
-  }
-
-  toggle.addEventListener("click", function () {
-    menu.classList.toggle("show");
-  });
-});
-    
-
-
-    </script>
-  
-
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
