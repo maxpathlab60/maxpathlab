@@ -701,6 +701,7 @@ footer {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: left;
     position: relative;
+    box-sizing: border-box;
 }
 
 .quote-icon {
@@ -769,6 +770,25 @@ footer {
 
 .carousel-indicator.current-slide {
     background: #555;
+}
+
+@media (max-width: 576px) {
+    .carousel-container {
+        padding: 0 1rem;
+    }
+
+    .carousel-track-container {
+        padding: 0.5rem 0;
+    }
+
+    .carousel-track {
+        gap: 12px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 
