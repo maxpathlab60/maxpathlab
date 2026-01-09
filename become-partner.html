@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Max Path Lab</title>
+    <title>Become a Partner - Max Path Lab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="become-partner.css">
 </head>
 <body>
 
     <header>
+        <div class="top-bar">
+            <a href="https://lab.maxpathlab.com/labmatedownload/" class="top-bar-link blue">Download Report</a>
+            <a href="upload-prescription.html" class="top-bar-link blue">Upload Prescription</a>
+        </div>
         <nav class="navbar">
             <a href="index.html" class="logo"><img src="logo-h.jpeg" alt="Max Path Lab"></a>
             <div class="menu-toggle">
@@ -17,71 +22,65 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
+            
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="index.html#gallery">Gallery</a></li>
+              
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://lab.maxpathlab.com/franchises/">Franchise Login</a></li>
                 <li><a href="book-test.html" class="btn">Book Test</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="page-header">
-        <div class="header-content">
-            <h1>Our Services</h1>
-            <p>Comprehensive Diagnostic Solutions for Your Health</p>
+    <!-- Page Header -->
+    <div class="page-header" style="background: #b0c4de; display: flex; align-items: center; justify-content: center; height: 250px;">
+        <div class="header-content" style="text-align: center;">
+            <h1 style="color: #000; font-size: 3rem; margin: 0;">Become Partner</h1>
         </div>
     </div>
 
-    <section class="services">
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-microscope service-icon"></i>
-                <h3>Pathology</h3>
-                <p>Our pathology department offers a wide range of tests including Hematology, Clinical Pathology, Cytopathology, and Histopathology. We use automated analyzers for precise results.</p>
+    <!-- Intro Section -->
+    <section class="partner-intro">
+        <div class="partner-intro-container">
+            <div class="partner-title-block">
+                <span class="partner-sub-label">BECOME A PARTNER</span>
+                <h2>Partner with Max Path Lab</h2>
             </div>
-            <div class="service-card">
-                <i class="fas fa-flask service-icon"></i>
-                <h3>Biochemistry</h3>
-                <p>We perform routine and specialized biochemistry tests such as Liver Function Tests (LFT), Kidney Function Tests (KFT), Lipid Profile, Diabetic Profile, and Cardiac Markers.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-dna service-icon"></i>
-                <h3>Microbiology</h3>
-                <p>Our microbiology lab identifies infectious agents like bacteria, viruses, fungi, and parasites. We offer culture and sensitivity testing to guide appropriate antibiotic therapy.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-x-ray service-icon"></i>
-                <h3>Radiology & Imaging</h3>
-                <p>Equipped with digital X-Ray, Ultrasound, and MRI facilities to provide high-quality imaging for accurate diagnosis of internal conditions.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-heartbeat service-icon"></i>
-                <h3>Cardiology</h3>
-                <p>We offer non-invasive cardiac diagnostic services including ECG, Echocardiography (Echo), and TMT (Treadmill Test) to assess heart health.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-child service-icon"></i>
-                <h3>Health Packages</h3>
-                <p>Comprehensive health check-up packages designed for different age groups and lifestyles, including Full Body Checkup, Women's Health, and Senior Citizen packages.</p>
+            <div class="partner-desc-block">
+                <p>
+                    Welcome to Max Path Lab! We're excited about the opportunity to build valuable partnerships that enhance healthcare accessibility and quality. By joining forces with Max Path Lab, you're stepping into a future of collaborative healthcare, high-precision diagnostics, and a commitment to patient well-being.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="about" style="background-color: var(--white);">
-        <div class="about-container">
-            <div class="about-content" style="text-align: center;">
-                <h2>Book a Home Collection</h2>
-                <p>Can't visit the lab? We bring the lab to your doorstep. Schedule a home sample collection at your convenience.</p>
-                <br>
-                <a href="contact.html#book" class="btn">Book Now</a>
+    <!-- Form Section -->
+    <section class="partner-form-section">
+        <div class="partner-form-container">
+            <div class="partner-image-col">
+                <!-- Image background via CSS -->
+            </div>
+            <div class="partner-form-col">
+                <h2>Fill the Form to become a Partner</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="fullname" placeholder="Enter Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Enter Phone Number" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Floating Action Buttons -->
     <div class="floating-actions">
-        <a href="https://wa.me/919634688282" target="_blank" class="action-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/919458558116" target="_blank" class="action-btn whatsapp-btn" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
             <span class="tooltip">WhatsApp</span>
         </a>

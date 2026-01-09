@@ -1,0 +1,153 @@
+/* Become a Partner Page Styles */
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #00a8cc;
+    --dark-text: #333;
+    --light-text: #555;
+    --white: #ffffff;
+    --light-bg: #f4f4f4;
+    --form-bg: #ffffff;
+}
+
+/* Page Header Override for this page if needed, otherwise uses style.css */
+/* The screenshot shows a centered title "Become Partner" with a light blue background */
+/* We can reuse .page-header from style.css but might need to adjust if the look is different */
+
+/* Intro Section */
+.partner-intro {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.partner-intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.partner-title-block {
+    flex: 1;
+    min-width: 300px;
+}
+
+.partner-sub-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.partner-title-block h2 {
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.partner-desc-block {
+    flex: 1;
+    min-width: 300px;
+}
+
+.partner-desc-block p {
+    color: var(--light-text);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Form Section */
+.partner-form-section {
+    padding: 4rem 2rem;
+    background-color: var(--white); /* Screenshot looks white/clean */
+}
+
+.partner-form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.partner-image-col {
+    flex: 1;
+    min-width: 300px;
+    background-image: url('images/3.jpeg'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.partner-form-col {
+    flex: 1;
+    min-width: 300px;
+    padding: 3rem;
+}
+
+.partner-form-col h2 {
+    font-size: 2rem;
+    color: #003366; /* Dark blue from screenshot */
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a3c70; /* Dark blue button */
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #002244;
+}
+
+@media (max-width: 768px) {
+    .partner-intro-container,
+    .partner-form-container {
+        flex-direction: column;
+    }
+    
+    .partner-image-col {
+        min-height: 250px;
+        width: 100%;
+    }
+}

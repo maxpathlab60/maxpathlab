@@ -91,7 +91,7 @@
     <section class="upload-form-section">
         <div class="form-container-dashed">
             <h2>Upload Prescription</h2>
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form id="upload-form">
                 <div class="form-group">
                     <input type="text" name="name" class="form-input" placeholder="Name" required>
                 </div>
@@ -105,12 +105,14 @@
                 <div class="file-upload-wrapper">
                     <label class="file-upload-label">Upload Prescription</label>
                     <div class="file-input-group">
-                        <input type="file" name="prescription" id="prescription" required>
+                        <input type="file" id="prescription" accept=".jpg,.jpeg,.png,.pdf" required>
                     </div>
                 </div>
                 <div class="file-type-hint">
                     File type:- .jpg, .pdf, .jpeg, .png
                 </div>
+                <p id="uploadStatus" style="margin-top:10px;font-size:14px;"></p>
+
 
                 <button type="submit" class="upload-submit-btn">Upload Prescription</button>
             </form>
@@ -121,26 +123,45 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Max Path Lab</h4>
-                <p>Dedicated to excellence in diagnostics.</p>
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> t-2, Krishna Arcade, D-252, Bypass Road, Water Works, Ghatwasan, Kamla Nagar, Agra, Uttar Pradesh 282005</li>
+                    <li><i class="fas fa-phone"></i> 9634688282</li>
+                    <li><i class="fas fa-envelope"></i> maxpathlab@gmail.com</li>
+                    <li><i class="fas fa-globe"></i> www.maxpathlab.com</li>
+                </ul>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h4>Useful Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="book-test.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li><a href="become-partner.html">Become A Partner</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact Us</h4>
+                <h4>Test Packages</h4>
                 <ul>
-                    <li><i class="fas fa-phone"></i> 9634688282</li>
-                    <li><i class="fas fa-envelope"></i> maxpathlab@gmail.com</li>
-                    <li><i class="fas fa-globe"></i> www.maxpathlab.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> t-2, Krishna Arcade, D-252, Bypass Road, Water Works, Ghatwasan, Kamla Nagar, Agra, Uttar Pradesh 282005</li>
+                    <li><a href="book-test.html">Anemia Profile</a></li>
+                    <li><a href="book-test.html">Cancer Screen Panel</a></li>
+                    <li><a href="book-test.html">Diabetes Screen</a></li>
+                    <li><a href="book-test.html">Arthritis Panel</a></li>
+                    <li><a href="book-test.html">Full Body Checkup</a></li>
                 </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Open Hours</h4>
+                <p><i class="far fa-clock"></i> Mon - Sat: 8:00 AM - 8:00 PM</p>
+                <p><i class="far fa-clock"></i> Sunday: 8:00 AM - 2:00 PM</p>
+                <br>
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -149,6 +170,9 @@
     </footer>
 
     <!-- Scripts -->
+     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="upload-prescription.js"></script>
+
     <script src="script.js"></script>
     <!-- <script>
         // Simple script to handle menu toggle if needed, reusing script.js logic usually
