@@ -386,7 +386,9 @@ header {
     .page-header-about {
         background-image: url('./images/Banner2.png') !important;
     }
-
+    .services{
+        padding: 0px 5%;
+    }
     /* Services Mobile Banner (Default page-header) */
     .page-header {
         background-image: url('./images/Banner3.png') !important;
