@@ -326,9 +326,89 @@ header {
     font-size: 3rem;
 }
 
+/* Specific Page Headers for Desktop */
+.page-header-about {
+    background: linear-gradient(rgba(0,86,179,0.8), rgba(0,168,204,0.8)), url('download-image (2).jpeg') no-repeat center center/cover !important;
+}
+
+.page-header-book {
+    background: linear-gradient(rgba(0,86,179,0.8), rgba(0,168,204,0.8)), url('download-image (1).jpeg') no-repeat center center/cover !important;
+}
+
+.page-header-contact {
+    background: linear-gradient(rgba(0,86,179,0.8), rgba(0,168,204,0.8)), url('download-image (3).jpg') no-repeat center center/cover !important;
+}
+
+.page-header-partner {
+    background: #b0c4de !important;
+    height: 250px !important;
+}
+
+/* Mobile Banner Overrides */
 @media (max-width: 768px) {
     .page-header {
-        background: linear-gradient(rgba(0,86,179,0.9), rgba(0,168,204,0.9)) !important;
+        background: linear-gradient(rgba(0,86,179,0.9), rgba(0,168,204,0.9));
+    }
+
+    /* Index Hero Mobile Banner */
+    .hero {
+        background-image: url('./images/Banner1.png') !important;
+        height: 60vh; /* Adjust height for mobile if needed */
+        background-repeat: no-repeat;
+        background-size:contain !important;
+        
+    }
+
+    /* Hide text on mobile hero since image has text */
+    .hero .hero-content h1,
+    .hero .hero-content p {
+        display: none;
+    }
+
+    /* Adjust button container on mobile hero */
+    .hero .index-btn {
+        /* margin-top: 15rem; Push buttons down or adjust position */
+            margin-left: 50px;
+    padding-bottom: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero .index-btn .btn {
+        width: 80%;
+        margin-bottom: 0 !important;
+    }
+
+    /* About Mobile Banner */
+    .page-header-about {
+        background-image: url('./images/Banner2.png') !important;
+    }
+
+    /* Services Mobile Banner (Default page-header) */
+    .page-header {
+        background-image: url('./images/Banner3.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* Book Test Mobile Banner */
+    .page-header-book {
+        background-image: url('./images/Banner4.png') !important;
+    }
+
+    /* Contact Mobile Banner */
+    .page-header-contact {
+        background-image: url('./images/Banner4.png') !important;
+    }
+    
+    /* Partner Mobile Banner (Using banner5 as fallback or specific if requested) */
+    .page-header-partner {
+        background-image: url('./images/Banner5.png') !important;
+        background-size:auto !important;
+        background-repeat: no-repeat !important;
     }
 }
 
@@ -954,5 +1034,16 @@ footer {
     }
     .sample{
         margin-bottom: 50px;
+        /* margin-top: 50px */
+    }
+
+}
+@media (min-width: 768px) {
+    .contact-img{
+        background-image: url(./images/Banner\ 1.png);
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        background-color: #25D366;
     }
 }
