@@ -393,7 +393,7 @@ header {
         flex-direction: row;
         justify-content: center;
         gap: 10px;
-        padding: 1rem 5%;
+        padding: 2.8rem 5%;
     }
 
     .mobile-hero-actions .btn-small {
@@ -409,7 +409,7 @@ header {
         background-image: url('./images/Banner2.png') !important;
     }
     .services{
-        padding: 0px 5%;
+        padding: 35px 5%;
     }
     /* Services Mobile Banner (Default page-header) */
     .page-header {
