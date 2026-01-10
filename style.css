@@ -344,42 +344,64 @@ header {
     height: 250px !important;
 }
 
+/* Mobile Hero hidden on desktop */
+.mobile-hero {
+    display: none;
+}
+
 /* Mobile Banner Overrides */
 @media (max-width: 768px) {
     .page-header {
         background: linear-gradient(rgba(0,86,179,0.9), rgba(0,168,204,0.9));
     }
 
-    /* Index Hero Mobile Banner */
-    .hero {
-        background-image: url('./images/Banner1.png') !important;
-        height: 60vh; /* Adjust height for mobile if needed */
-        background-repeat: no-repeat;
-        background-size:contain !important;
-        
-    }
-
-    /* Hide text on mobile hero since image has text */
-    .hero .hero-content h1,
-    .hero .hero-content p {
+    /* Hide Desktop Hero on Mobile */
+    .desktop-hero {
         display: none;
     }
 
-    /* Adjust button container on mobile hero */
-    .hero .index-btn {
-        /* margin-top: 15rem; Push buttons down or adjust position */
-        margin-left: 50px;
-        padding-bottom: 150px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+    /* Show Mobile Hero */
+    .mobile-hero {
+        display: block;
+        margin-top: 145px; /* Adjust for fixed navbar */
+        background-color: var(--white);
     }
 
-    .hero .index-btn .btn {
-        width: 80%;
-        margin-bottom: 0 !important;
+    .mobile-banner-slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .mobile-banner-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile-banner-slider img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        max-height: 60vh; /* Prevent it from being too tall */
+        scroll-snap-align: start;
+        object-fit: contain; /* Or cover, depending on image aspect ratio */
+    }
+
+    .mobile-hero-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 1rem 5%;
+    }
+
+    .mobile-hero-actions .btn-small {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
     }
 
     /* About Mobile Banner */
