@@ -368,8 +368,8 @@ header {
     /* Adjust button container on mobile hero */
     .hero .index-btn {
         /* margin-top: 15rem; Push buttons down or adjust position */
-            margin-left: 50px;
-    padding-bottom: 150px;
+        margin-left: 50px;
+        padding-bottom: 150px;
         width: 100%;
         display: flex;
         flex-direction: column;
